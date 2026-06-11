@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireless Earbuds with Noise Cancellation | 75Hr Battery · Bluetooth 5.4 · IPX7</title>
+<meta name="description" content="Premium wireless earbuds with ENC noise cancellation, 75-hour total playtime, Bluetooth 5.4, and IPX7 waterproof. Limited time deal on Amazon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #06060f;
+    --bg2: #0d0d1e;
+    --bg3: #12122a;
+    --surface: rgba(255,255,255,0.04);
+    --border: rgba(255,255,255,0.08);
+    --border2: rgba(255,255,255,0.14);
+    --text: #f0f0f8;
+    --text2: rgba(240,240,248,0.55);
+    --text3: rgba(240,240,248,0.3);
+    --accent: #5c9eff;
+    --accent2: #7b6ff0;
+    --green: #4dffa0;
+    --gold: #ffd166;
+    --red: #ff5c5c;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(6,6,15,0.85);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 5%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-cta {
+    background: var(--accent);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    border-radius: 999px;
+    padding: 8px 18px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .nav-cta:hover { opacity: 0.85; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 5% 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 20% 60%, rgba(92,158,255,0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 50% at 80% 40%, rgba(123,111,240,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,92,92,0.1);
+    color: #ff7a7a;
+    border: 1px solid rgba(255,92,92,0.25);
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    margin-bottom: 28px;
+    position: relative;
+  }
+  .pulse-dot {
+    width: 6px; height: 6px;
+    background: #ff5c5c;
+    border-radius: 50%;
+    animation: pulse 1.8s infinite;
+  }
+  @keyframes pulse {
+    0%,100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.4); }
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 7vw, 5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    max-width: 780px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .hero h1 .highlight {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-sub {
+    font-size: 17px;
+    color: var(--text2);
+    max-width: 520px;
+    margin-bottom: 40px;
+    line-height: 1.7;
+    position: relative;
+  }
+  .price-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .price-was {
+    font-size: 16px;
+    color: var(--text3);
+    text-decoration: line-through;
+  }
+  .price-now {
+    font-family: var(--font-display);
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: var(--green);
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  .badge-off {
+    background: #ff5c5c;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    border-radius: 8px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+  
+  }
+  .hero-btns {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #5c9eff, #7b6ff0);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 999px;
+    padding: 14px 30px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+  .btn-primary:hover { transform: translateY(-2px); opacity: 0.9; }
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    color: var(--text2);
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid var(--border2);
+    border-radius: 999px;
+    padding: 14px 26px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  .btn-secondary:hover { background: var(--surface); color: var(--text); }
+
+  /* STATS BAR */
+  .stats-bar {
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 28px 5%;
+    display: flex;
+    justify-content: center;
+    gap: clamp(28px, 6vw, 80px);
+    flex-wrap: wrap;
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat-label { font-size: 12px; color: var(--text2); text-transform: uppercase; letter-spacing: 0.08em; }
+
+  /* GALLERY */
+  .section { padding: 90px 5%; }
+  .section-header { text-align: center; margin-bottom: 60px; }
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.7rem, 4vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+  .section-sub { font-size: 15px; color: var(--text2); max-width: 480px; margin: 0 auto; }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .color-card {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+    position: relative;
+  }
+  .card-img-wrap {
+    border-radius: 20px;
+    overflow: hidden;
+    background: transparent;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .card-img-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.06);
+    pointer-events: none;
+    transition: border-color 0.3s;
+  }
+  .color-card:hover .card-img-wrap::after {
+    border-color: rgba(92,158,255,0.35);
+  }
+  .card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 14px;
+    display: block;
+    transition: transform 0.3s ease;
+    mix-blend-mode: normal;
+  }
+  .color-card:hover .card-img-wrap img {
+    transform: scale(1.06);
+  }
+  .card-glow {
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    background: radial-gradient(ellipse at 50% 80%, rgba(92,158,255,0.18), transparent 70%);
+  }
+  .color-card:hover .card-glow { opacity: 1; }
+  .card-name {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text2);
+    font-weight: 500;
+    margin-top: 10px;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+  .color-card:hover .card-name { color: var(--text); }
+  .shop-hint {
+    position: absolute;
+    bottom: 38px;
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    background: rgba(92,158,255,0.9);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 4px 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
+    pointer-events: none;
+  }
+  .color-card:hover .shop-hint { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  /* FEATURES */
+  .features-section {
+    padding: 90px 5%;
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .feat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    transition: border-color 0.3s, background 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .feat-card:hover {
+    border-color: var(--border2);
+    background: rgba(255,255,255,0.06);
+  }
+  .feat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .feat-card:hover::before { opacity: 1; }
+  .feat-icon-wrap {
+    width: 46px; height: 46px;
+    border-radius: 12px;
+    background: rgba(92,158,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+  }
+  .feat-icon-wrap svg { width: 22px; height: 22px; stroke: var(--accent); fill: none; stroke-width: 1.8; }
+  .feat-title {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .feat-desc { font-size: 14px; color: var(--text2); line-height: 1.65; }
+
+  /* SPECS */
+  .specs-section { padding: 90px 5%; }
+  .specs-wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .spec-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.2s;
+  }
+  .spec-row:last-child { border-bottom: none; }
+  .spec-row:hover { background: var(--surface); }
+  .spec-label { font-size: 13px; color: var(--text2); }
+  .spec-value { font-size: 13px; font-weight: 500; color: var(--text); text-align: right; max-width: 58%; }
+  .spec-badge {
+    display: inline-block;
+    background: rgba(77,255,160,0.1);
+    color: #4dffa0;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    margin-left: 6px;
+  }
+
+  /* BOTTOM CTA */
+  .cta-section {
+    padding: 100px 5%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(92,158,255,0.07), transparent 70%);
+    pointer-events: none;
+  }
+  .cta-section h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 5vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .cta-section p {
+    font-size: 16px;
+    color: var(--text2);
+    margin-bottom: 36px;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  .big-price {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 800;
+    color: var(--green);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 8px;
+    position: relative;
+  }
+  .big-was {
+    font-size: 16px;
+    color: var(--text3);
+    text-decoration: line-through;
+    margin-bottom: 32px;
+    position: relative;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    padding: 28px 5%;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text3);
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  /* AMAZON SVG ICON */
+  .amz-icon { display: inline-block; vertical-align: middle; margin-right: 4px; }
+
+  /* SCROLL REVEAL */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .features-grid { grid-template-columns: 1fr; }
+    nav { padding: 0 4%; }
+    .section { padding: 60px 4%; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .pulse-dot { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Sound<span>Pro</span></div>
+  <a href="https://amzn.to/43UwgLk" target="_blank" rel="nofollow" class="nav-cta">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+    Buy on Amazon
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-eyebrow"><span class="pulse-dot"></span> Limited time deal</div>
+  <h1>Wireless Earbuds with<br><span class="highlight">Noise Cancellation</span></h1>
+  <p class="hero-sub">75-hour battery · Bluetooth 5.4 · ENC noise-cancelling mics · IPX7 waterproof · 14.2mm deep bass drivers</p>
+  <div class="price-row">
+    <span class="price-was">$39.99</span>
+    <span class="price-now">$26.66</span>
+    <span class="badge-off">Save 33%</span>
+  </div>
+  
+  <div class="hero-btns">
+    <a href="https://amzn.to/43UwgLk" target="_blank" rel="nofollow" class="btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      Shop on Amazon
+    </a>
+    <a href="#colors" class="btn-secondary">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="8 12 12 16 16 12"/><line x1="12" y1="8" x2="12" y2="16"/></svg>
+      See all colors
+    </a>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat reveal">
+    <div class="stat-num">75hr</div>
+    <div class="stat-label">Total battery</div>
+  </div>
+  <div class="stat reveal">
+    <div class="stat-num">5.4</div>
+    <div class="stat-label">Bluetooth</div>
+  </div>
+  <div class="stat reveal">
+    <div class="stat-num">80%</div>
+    <div class="stat-label">Noise cancelled</div>
+  </div>
+  <div class="stat reveal">
+    <div class="stat-num">IPX7</div>
+    <div class="stat-label">Waterproof</div>
+  </div>
+  <div class="stat reveal">
+    <div class="stat-num">33ft</div>
+    <div class="stat-label">Range</div>
+  </div>
+  <div class="stat reveal">
+    <div class="stat-num">11</div>
+    <div class="stat-label">Colors</div>
+  </div>
+</div>
+
+<!-- COLORS / GALLERY -->
+<section class="section" id="colors">
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Color collection</div>
+    <h2 class="section-title">Pick your style</h2>
+    <p class="section-sub">11 colours to match your vibe. Hover for 3D preview · Click to shop.</p>
+  </div>
+  <div class="gallery-grid" id="gallery"></div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section">
+  <div class="section-header reveal">
+    <div class="section-eyebrow">What makes them special</div>
+    <h2 class="section-title">Built for performance</h2>
+    <p class="section-sub">Every detail engineered for your workout and daily life.</p>
+  </div>
+  <div class="features-grid">
+    <div class="feat-card reveal">
+      <div class="feat-icon-wrap">
+        <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+      </div>
+      <div class="feat-title">75-hour total playtime</div>
+      <div class="feat-desc">15 hours per charge plus a portable case that tops you up 5–6 more times. A full week of listening on a single case charge. Charges back up in just 15 minutes.</div>
+    </div>
+    <div class="feat-card reveal">
+      <div class="feat-icon-wrap">
+        <svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+      </div>
+      <div class="feat-title">ENC noise cancellation</div>
+      <div class="feat-desc">Advanced ENC microphones passively filter out up to 80% of background noise. Every call sounds clear regardless of where you are — commute, gym, or open office.</div>
+    </div>
+    <div class="feat-card reveal">
+      <div class="feat-icon-wrap">
+        <svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+      </div>
+      <div class="feat-title">Hi-Fi deep bass sound</div>
+      <div class="feat-desc">14.2mm drivers reproduce powerful lows, warm mids, and crisp highs. Engineered to deliver studio-quality audio that drives your workout and fuels your focus.</div>
+    </div>
+    <div class="feat-card reveal">
+      <div class="feat-icon-wrap">
+        <svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+      </div>
+      <div class="feat-title">Bluetooth 5.4 instant pair</div>
+      <div class="feat-desc">Open the case and they auto-connect to your last device instantly. Stable signal up to 33 ft with zero dropouts. Supports HFP, A2DP, HSP, and AVRCP.</div>
+    </div>
+    <div class="feat-card reveal">
+      <div class="feat-icon-wrap">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="feat-title">IPX7 waterproof</div>
+      <div class="feat-desc">Nano-coated shell repels sweat, rain, and splashes. Whether you're mid-sprint or caught in a downpour, these earbuds are built to keep up without missing a beat.</div>
+    </div>
+    <div class="feat-card reveal">
+      <div class="feat-icon-wrap">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/></svg>
+      </div>
+      <div class="feat-title">Ergonomic sport fit</div>
+      <div class="feat-desc">Flexible TPU earhooks conform to your ear shape and lock the buds in place through any movement. Lightweight, anti-allergic, and comfortable enough for all-day wear.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECS -->
+<section class="specs-section" id="specs">
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Technical specifications</div>
+    <h2 class="section-title">Specs at a glance</h2>
+  </div>
+  <div class="specs-wrap reveal">
+    <div class="spec-row"><span class="spec-label">Driver size</span><span class="spec-value">14.2mm</span></div>
+    <div class="spec-row"><span class="spec-label">Bluetooth version</span><span class="spec-value">5.4 (HFP / A2DP / HSP / AVRCP)</span></div>
+    <div class="spec-row"><span class="spec-label">Playtime per charge</span><span class="spec-value">Up to 15 hours <span class="spec-badge">Best in class</span></span></div>
+    <div class="spec-row"><span class="spec-label">Total playtime with case</span><span class="spec-value">75 hours</span></div>
+    <div class="spec-row"><span class="spec-label">Case recharge cycles</span><span class="spec-value">5–6 full charges</span></div>
+    <div class="spec-row"><span class="spec-label">Fast charge</span><span class="spec-value">15 min for significant top-up</span></div>
+    <div class="spec-row"><span class="spec-label">Connection range</span><span class="spec-value">Up to 33 ft (10m)</span></div>
+    <div class="spec-row"><span class="spec-label">Waterproof rating</span><span class="spec-value">IPX7 <span class="spec-badge">Sweat & rain proof</span></span></div>
+    <div class="spec-row"><span class="spec-label">Noise cancellation</span><span class="spec-value">ENC mics · 80% passive reduction</span></div>
+    <div class="spec-row"><span class="spec-label">Controls</span><span class="spec-value">Physical buttons (play · vol · calls · assistant)</span></div>
+    <div class="spec-row"><span class="spec-label">Display</span><span class="spec-value">Dual LED (case + earbud charge levels)</span></div>
+    <div class="spec-row"><span class="spec-label">Compatibility</span><span class="spec-value">All Bluetooth-enabled devices</span></div>
+    <div class="spec-row"><span class="spec-label">Earhook material</span><span class="spec-value">TPU (elastic, anti-allergic)</span></div>
+    <div class="spec-row"><span class="spec-label">Colors available</span><span class="spec-value">11 colors</span></div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="cta-section">
+  <div class="section-eyebrow reveal" style="margin-bottom:20px;">Limited time offer</div>
+  <h2 class="reveal">Get yours before the<br>deal disappears</h2>
+  <div class="big-price reveal">$26.66</div>
+  <div class="big-was reveal">Regular price $39.99</div>
+  
+  <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; position:relative;">
+    <a href="https://amzn.to/43UwgLk" target="_blank" rel="nofollow" class="btn-primary reveal" style="font-size:16px; padding:16px 36px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      Grab the deal on Amazon
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>As an Amazon Associate, we earn a commission from qualifying purchases made through the links provided on this platform. If you click on a product and finalize a purchase on Amazon, we may receive a small percentage of the sale at no additional cost to you. &nbsp;·&nbsp; <a href="https://amzn.to/43UwgLk" target="_blank" rel="nofollow">View on Amazon</a></p>
+</footer>
+
+<script>
+const LINK = 'https://amzn.to/43UwgLk';
+const products = [
+  { label: 'Black',        img: 'https://m.media-amazon.com/images/I/71NMUHszF4L._AC_SX569_.jpg' },
+  { label: 'Camel',        img: 'https://m.media-amazon.com/images/I/71ne6UMjXYL._AC_SX569_.jpg' },
+  { label: 'Cosmic orange',img: 'https://m.media-amazon.com/images/I/71QiSZiiTmL._AC_SL1500_.jpg' },
+  { label: 'Dark green',   img: 'https://m.media-amazon.com/images/I/71mvgjxKMyL._AC_SL1500_.jpg' },
+  { label: 'Green',        img: 'https://m.media-amazon.com/images/I/714RbRCgvrL._AC_SX569_.jpg' },
+  { label: 'Purple',       img: 'https://m.media-amazon.com/images/I/71poiC4TC0L._AC_SL1500_.jpg' },
+  { label: 'Red',          img: 'https://m.media-amazon.com/images/I/71Q9KPzdb9L._AC_SX569_.jpg' },
+  { label: 'Rose gold',    img: 'https://m.media-amazon.com/images/I/71ZDRTOEVyL._AC_SL1500_.jpg' },
+  { label: 'Royal blue',   img: 'https://m.media-amazon.com/images/I/717FY9S8wFL._AC_SX569_.jpg' },
+  { label: 'White',        img: 'https://m.media-amazon.com/images/I/61loGUHYrQL._AC_SL1500_.jpg' },
+  { label: 'Yellow',       img: 'https://m.media-amazon.com/images/I/71T1I66PZlL._AC_SX569_.jpg' },
+];
+
+const gallery = document.getElementById('gallery');
+products.forEach(p => {
+  const a = document.createElement('a');
+  a.className = 'color-card reveal';
+  a.href = LINK;
+  a.target = '_blank';
+  a.rel = 'nofollow';
+  a.setAttribute('aria-label', p.label + ' wireless earbuds — shop on Amazon');
+  a.innerHTML = `
+    <div class="card-img-wrap">
+      <img src="${p.img}" alt="${p.label} earbuds" loading="lazy">
+      <div class="card-glow"></div>
+    </div>
+    <div class="shop-hint">Shop on Amazon ↗</div>
+    <div class="card-name">${p.label}</div>
+  `;
+  gallery.appendChild(a);
+
+  a.addEventListener('mousemove', e => {
+    const r = a.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
+    a.style.transform = `perspective(700px) rotateY(${x * 22}deg) rotateX(${-y * 22}deg) translateZ(14px) scale(1.03)`;
+    a.style.transition = 'transform 0.08s ease-out';
+  });
+  a.addEventListener('mouseleave', () => {
+    a.style.transition = 'transform 0.5s ease';
+    a.style.transform = 'perspective(700px) rotateY(0deg) rotateX(0deg) translateZ(0px) scale(1)';
+  });
+});
+
+// Scroll reveal
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 60);
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
