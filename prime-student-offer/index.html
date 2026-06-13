@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon Prime 6-Month Trial for Students & Young Adults | TheDeals</title>
+  <meta name="description" content="Students and young adults can explore a 6-month Amazon Prime trial offer with fast shipping, Prime Video, Prime Gaming, Grubhub+ benefits, exclusive deals, and more. Terms apply." />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #050b1f;
+      --bg2: #071536;
+      --card: rgba(255,255,255,0.10);
+      --card2: rgba(255,255,255,0.06);
+      --border: rgba(255,255,255,0.18);
+      --text: #ffffff;
+      --muted: #b8c7e6;
+      --blue: #00a8ff;
+      --cyan: #59f1ff;
+      --orange: #ffb84d;
+      --green: #31e6a1;
+      --shadow: 0 25px 80px rgba(0,0,0,0.35);
+    }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #163b82 0%, transparent 35%),
+                  radial-gradient(circle at top right, #0e9cbd 0%, transparent 30%),
+                  linear-gradient(135deg, var(--bg), var(--bg2));
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1180px, 92%); margin: auto; position: relative; z-index: 2; }
+
+    .blur-orb {
+      position: fixed;
+      width: 440px;
+      height: 440px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(0,168,255,.34), rgba(255,184,77,.22));
+      filter: blur(55px);
+      opacity: .55;
+      z-index: 0;
+      animation: floatOrb 10s ease-in-out infinite alternate;
+    }
+    .orb1 { left: -150px; top: 80px; }
+    .orb2 { right: -150px; bottom: 120px; animation-delay: 2s; }
+
+    @keyframes floatOrb {
+      from { transform: translate3d(0,0,0) scale(1); }
+      to { transform: translate3d(45px,-30px,0) scale(1.08); }
+    }
+
+    header {
+      padding: 24px 0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(5,11,31,.62);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      font-size: 1.35rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-badge {
+      width: 38px; height: 38px;
+      border-radius: 14px;
+      display: grid; place-items: center;
+      background: linear-gradient(135deg, var(--blue), var(--orange));
+      box-shadow: 0 12px 30px rgba(0,168,255,.3);
+    }
+
+    .nav-links { display: flex; gap: 22px; color: var(--muted); font-size: .95rem; }
+    .nav-links a:hover { color: white; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 1px solid rgba(255,255,255,.16);
+      transition: .25s ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #00a8ff, #59f1ff);
+      color: #021126;
+      box-shadow: 0 18px 45px rgba(0,168,255,.34);
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 24px 65px rgba(0,168,255,.5); }
+    .btn-soft { background: rgba(255,255,255,.08); color: white; }
+    .btn-soft:hover { background: rgba(255,255,255,.14); transform: translateY(-2px); }
+
+    .hero { padding: 88px 0 74px; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 14px;
+      background: rgba(255,255,255,.09);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: #dff8ff;
+      font-weight: 700;
+      font-size: .9rem;
+      margin-bottom: 22px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.16);
+    }
+
+    h1 {
+      font-size: clamp(2.55rem, 7vw, 5.6rem);
+      line-height: .98;
+      letter-spacing: -0.075em;
+      margin-bottom: 22px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #fff 10%, #8eeeff 45%, #ffcf84 90%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p.lead {
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.28rem);
+      max-width: 690px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 24px; }
+    .trust-line { color: #91a9d8; font-size: .92rem; }
+
+    .hero-visual {
+      perspective: 1200px;
+      position: relative;
+      min-height: 560px;
+    }
+
+    .device-card {
+      position: relative;
+      width: 100%;
+      min-height: 540px;
+      border: 1px solid var(--border);
+      border-radius: 42px;
+      background: linear-gradient(145deg, rgba(255,255,255,.16), rgba(255,255,255,.05));
+      backdrop-filter: blur(22px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transform: rotateY(-9deg) rotateX(6deg);
+      animation: floatCard 5.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatCard {
+      from { transform: rotateY(-9deg) rotateX(6deg) translateY(0); }
+      to { transform: rotateY(-5deg) rotateX(3deg) translateY(-14px); }
+    }
+
+    .screen-top {
+      padding: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #d7efff;
+    }
+
+    .mock-hero {
+      width: calc(100% - 56px);
+      margin: 0 auto;
+      height: 250px;
+      border-radius: 30px;
+      background:
+        linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.22)),
+        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80') center/cover;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 25px 60px rgba(0,0,0,.28);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mock-hero::after {
+      content: "Prime Student Deal";
+      position: absolute;
+      left: 22px; bottom: 20px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.45);
+      backdrop-filter: blur(10px);
+      font-weight: 800;
+    }
+
+    .mini-dashboard {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding: 22px 28px 28px;
+    }
+
+    .mini-tile {
+      min-height: 92px;
+      padding: 18px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.09);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    .mini-tile b { display: block; font-size: 1.35rem; margin-bottom: 4px; }
+    .mini-tile span { color: var(--muted); font-size: .9rem; }
+
+    .floating-pill {
+      position: absolute;
+      z-index: 4;
+      padding: 13px 16px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.13);
+      border: 1px solid rgba(255,255,255,.18);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 20px 50px rgba(0,0,0,.22);
+      font-weight: 800;
+      animation: bob 4s ease-in-out infinite alternate;
+    }
+
+    .pill1 { top: 55px; left: -18px; }
+    .pill2 { top: 280px; right: -22px; animation-delay: 1s; }
+    .pill3 { bottom: 52px; left: 18px; animation-delay: 1.8s; }
+    @keyframes bob { from { transform: translateY(0); } to { transform: translateY(-14px); } }
+
+    section { padding: 72px 0; }
+    .section-head { text-align: center; max-width: 760px; margin: 0 auto 42px; }
+    .section-head h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.05; letter-spacing: -0.055em; margin-bottom: 16px; }
+    .section-head p { color: var(--muted); font-size: 1.08rem; }
+
+    .grid-6 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .glass-card {
+      padding: 26px;
+      border-radius: 30px;
+      background: linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.055));
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 55px rgba(0,0,0,.18);
+      backdrop-filter: blur(18px);
+      transition: .25s ease;
+    }
+    .glass-card:hover { transform: translateY(-8px); background: rgba(255,255,255,.14); }
+    .icon { font-size: 2.2rem; margin-bottom: 18px; display: inline-block; }
+    .glass-card h3 { font-size: 1.25rem; margin-bottom: 8px; }
+    .glass-card p { color: var(--muted); }
+
+    .calculator {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+    .big-value {
+      border-radius: 38px;
+      padding: 36px;
+      background: linear-gradient(135deg, rgba(0,168,255,.22), rgba(255,184,77,.14));
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      min-height: 100%;
+    }
+    .big-value .number { font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 950; letter-spacing: -.08em; line-height: 1; }
+    .big-value p { color: var(--muted); margin-top: 16px; }
+
+    .value-table { overflow: hidden; border-radius: 30px; border: 1px solid var(--border); background: rgba(255,255,255,.08); }
+    .row { display: flex; justify-content: space-between; gap: 20px; padding: 20px 24px; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .row:last-child { border-bottom: none; }
+    .row span { color: var(--muted); }
+    .row strong { color: #fff; font-size: 1.1rem; }
+
+    .lifestyle {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: center;
+    }
+    .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .photo {
+      height: 230px;
+      border-radius: 30px;
+      background-size: cover;
+      background-position: center;
+      border: 1px solid rgba(255,255,255,.16);
+      box-shadow: 0 20px 55px rgba(0,0,0,.22);
+    }
+    .photo:nth-child(1) { background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80'); }
+    .photo:nth-child(2) { background-image: url('https://images.unsplash.com/photo-1512070679279-8988d32161be?auto=format&fit=crop&w=900&q=80'); }
+    .photo:nth-child(3) { background-image: url('https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=900&q=80'); }
+    .photo:nth-child(4) { background-image: url('https://images.unsplash.com/photo-1607083206968-13611e3d76db?auto=format&fit=crop&w=900&q=80'); }
+
+    .lifestyle-copy h2 { font-size: clamp(2.2rem, 4.7vw, 4.2rem); line-height: 1.04; letter-spacing: -.065em; margin-bottom: 20px; }
+    .lifestyle-copy p { color: var(--muted); font-size: 1.08rem; margin-bottom: 22px; }
+
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; counter-reset: steps; }
+    .step { position: relative; overflow: hidden; }
+    .step::before {
+      counter-increment: steps;
+      content: "0" counter(steps);
+      display: inline-grid;
+      place-items: center;
+      width: 52px; height: 52px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      color: #031125;
+      font-weight: 950;
+      margin-bottom: 18px;
+    }
+
+    .faq { max-width: 850px; margin: auto; display: grid; gap: 14px; }
+    details {
+      padding: 22px 24px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid var(--border);
+    }
+    summary { cursor: pointer; font-weight: 850; font-size: 1.08rem; }
+    details p { color: var(--muted); margin-top: 13px; }
+
+    .final-cta {
+      text-align: center;
+      padding: 64px 30px;
+      border-radius: 44px;
+      background: linear-gradient(135deg, rgba(0,168,255,.24), rgba(255,184,77,.16));
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+    .final-cta h2 { font-size: clamp(2.1rem, 5vw, 4.2rem); line-height: 1.05; letter-spacing: -.06em; margin-bottom: 18px; }
+    .final-cta p { color: var(--muted); margin: 0 auto 26px; max-width: 720px; }
+
+    footer { padding: 38px 0 50px; color: #8da4d1; font-size: .92rem; }
+    .footer-grid { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,.1); padding-top: 24px; }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: .7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 920px) {
+      .nav-links { display: none; }
+      .hero-grid, .calculator, .lifestyle { grid-template-columns: 1fr; }
+      .hero-visual { min-height: 460px; }
+      .device-card { min-height: 455px; transform: none; }
+      .grid-6, .steps { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 620px) {
+      header .btn { display: none; }
+      .hero { padding-top: 58px; }
+      .grid-6, .steps, .photo-grid { grid-template-columns: 1fr; }
+      .hero-actions .btn { width: 100%; }
+      .floating-pill { display: none; }
+      .mini-dashboard { grid-template-columns: 1fr; }
+      .photo { height: 200px; }
+      .row { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="blur-orb orb1"></div>
+  <div class="blur-orb orb2"></div>
+
+  <header>
+    <div class="container nav">
+      <a href="https://thedeals.online/" class="logo" aria-label="TheDeals Home">
+        <span class="logo-badge">⚡</span>
+        <span>TheDeals</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#benefits">Benefits</a>
+        <a href="#savings">Savings</a>
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-primary" href="https://amzn.to/4xoYWtq" target="_blank" rel="nofollow sponsored noopener">Claim Trial</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">🎓 Trial courtesy of Grubhub • Terms apply</div>
+          <h1><span class="gradient-text">Students & Young Adults:</span><br>Get Amazon Prime FREE for 6 Months</h1>
+          <p class="lead">Enjoy full Prime benefits built for student life — fast shipping, Prime Video, Prime Gaming, Grubhub+ benefits, exclusive deals, and 5% cash back on eligible items.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://amzn.to/4xoYWtq" target="_blank" rel="nofollow sponsored noopener">Claim Your Free 6-Month Trial →</a>
+            <a class="btn btn-soft" href="#benefits">See Benefits</a>
+          </div>
+          <p class="trust-line">After the trial, the membership may auto-renew at the listed student/young adult rate. Always check Amazon’s final checkout page for current terms.</p>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Student Prime benefits illustration">
+          <div class="floating-pill pill1">📦 Fast Shipping</div>
+          <div class="floating-pill pill2">🍔 Grubhub+</div>
+          <div class="floating-pill pill3">🎬 Prime Video</div>
+          <div class="device-card">
+            <div class="screen-top">
+              <strong>Prime Student Hub</strong>
+              <span>6 months • $0 trial</span>
+            </div>
+            <div class="mock-hero"></div>
+            <div class="mini-dashboard">
+              <div class="mini-tile"><b>5%</b><span>Cash back on eligible items</span></div>
+              <div class="mini-tile"><b>75K+</b><span>Movies, shows & entertainment</span></div>
+              <div class="mini-tile"><b>$0</b><span>Trial for eligible users</span></div>
+              <div class="mini-tile"><b>24/7</b><span>Student lifestyle benefits</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Prime benefits that fit your daily student life</h2>
+          <p>From last-minute essentials to movie nights and food delivery, this trial gives students and young adults a simple way to save more and enjoy more.</p>
+        </div>
+        <div class="grid-6">
+          <div class="glass-card reveal"><span class="icon">📦</span><h3>Free Fast Shipping</h3><p>Order textbooks, dorm essentials, tech accessories, and daily items with Prime delivery benefits.</p></div>
+          <div class="glass-card reveal"><span class="icon">🎬</span><h3>Prime Video & Movies</h3><p>Stream shows, movies, and entertainment for study breaks, weekends, and movie nights.</p></div>
+          <div class="glass-card reveal"><span class="icon">🎮</span><h3>Prime Gaming Rewards</h3><p>Access gaming perks, monthly rewards, and bonus content for your favorite games.</p></div>
+          <div class="glass-card reveal"><span class="icon">🍔</span><h3>Grubhub+ Benefits</h3><p>Enjoy food delivery perks that make late-night study sessions and busy days easier.</p></div>
+          <div class="glass-card reveal"><span class="icon">💰</span><h3>5% Cash Back</h3><p>Earn cash back on eligible items when the offer terms and payment requirements apply.</p></div>
+          <div class="glass-card reveal"><span class="icon">⚡</span><h3>Exclusive Prime Deals</h3><p>Get access to Prime-only offers, limited-time deals, and seasonal shopping events.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="savings">
+      <div class="container calculator">
+        <div class="big-value reveal">
+          <p>Estimated benefit value during the trial</p>
+          <div class="number">$150+</div>
+          <p>These example values are for marketing illustration only. Actual savings depend on how you use Prime, your location, eligibility, and Amazon’s current terms.</p>
+          <br>
+          <a class="btn btn-primary" href="https://amzn.to/4xoYWtq" target="_blank" rel="nofollow sponsored noopener">Start Saving Today</a>
+        </div>
+        <div class="value-table reveal">
+          <div class="row"><span>Prime Shipping</span><strong>$9.99/mo value</strong></div>
+          <div class="row"><span>Prime Video</span><strong>$8.99/mo value</strong></div>
+          <div class="row"><span>Grubhub+ Benefits</span><strong>$9.99/mo value</strong></div>
+          <div class="row"><span>Gaming Rewards</span><strong>$4.99/mo value</strong></div>
+          <div class="row"><span>Exclusive Prime Deals</span><strong>Extra savings</strong></div>
+          <div class="row"><span>Total During Trial</span><strong>Over $150+</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container lifestyle">
+        <div class="photo-grid reveal" aria-label="Student lifestyle images">
+          <div class="photo" title="Student studying with laptop"></div>
+          <div class="photo" title="Watching movies on laptop"></div>
+          <div class="photo" title="Ordering food delivery"></div>
+          <div class="photo" title="Receiving package delivery"></div>
+        </div>
+        <div class="lifestyle-copy reveal">
+          <h2>Everything students need in one membership</h2>
+          <p>College life moves fast. This Prime trial helps you shop smarter, watch more, order easier, and catch exclusive deals without paying upfront during the eligible trial period.</p>
+          <p>Use it for dorm shopping, study supplies, weekend entertainment, food delivery perks, and everyday convenience.</p>
+          <a class="btn btn-primary" href="https://amzn.to/4xoYWtq" target="_blank" rel="nofollow sponsored noopener">Claim Your Free Trial</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>How it works</h2>
+          <p>Starting is simple. Follow the Amazon page instructions and confirm your eligibility before activating the trial.</p>
+        </div>
+        <div class="steps">
+          <div class="glass-card step reveal"><h3>Verify Student Status</h3><p>Amazon may ask you to confirm student or young adult eligibility before the trial starts.</p></div>
+          <div class="glass-card step reveal"><h3>Activate Free Trial</h3><p>Use the offer page, review the terms, and activate the 6-month trial if you qualify.</p></div>
+          <div class="glass-card step reveal"><h3>Enjoy Prime Benefits</h3><p>Start using shipping, entertainment, deals, Grubhub+ benefits, and eligible cash back perks.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Questions before you join?</h2>
+          <p>Here are the most common questions students and young adults ask before starting the Prime trial.</p>
+        </div>
+        <div class="faq reveal">
+          <details open>
+            <summary>Who qualifies?</summary>
+            <p>This offer is generally promoted for eligible 18–24 year-olds and students. Final eligibility is decided by Amazon during signup.</p>
+          </details>
+          <details>
+            <summary>Is the trial really free?</summary>
+            <p>The offer says the trial is $0 for the eligible 6-month period. You should still review Amazon’s checkout page and terms before activating.</p>
+          </details>
+          <details>
+            <summary>Can I cancel anytime?</summary>
+            <p>Most Prime trial memberships can be managed from your Amazon account. Check Amazon’s cancellation and renewal terms before joining.</p>
+          </details>
+          <details>
+            <summary>What happens after 6 months?</summary>
+            <p>After the trial, the membership may auto-renew at the listed discounted monthly rate unless you cancel before renewal. Always check the latest rate on Amazon’s page.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="final-cta reveal">
+          <h2>Start your free 6-month Prime trial today</h2>
+          <p>Get the student-friendly Prime experience with shopping, streaming, food delivery perks, gaming rewards, exclusive deals, and more.</p>
+          <a class="btn btn-primary" href="https://amzn.to/4xoYWtq" target="_blank" rel="nofollow sponsored noopener">Start Your Free 6-Month Prime Trial →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> TheDeals.online • Student deals and online offers.</p>
+      <p>Disclosure: This page may contain affiliate links. As an affiliate, we may earn from qualifying purchases or signups. Amazon, Prime, and related marks belong to their respective owners. Terms apply.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
