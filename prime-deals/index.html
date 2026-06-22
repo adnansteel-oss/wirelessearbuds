@@ -5,32 +5,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>🔥 Prime Deals 3D</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 <style>
+*{
+  box-sizing:border-box;
+}
+
 body{
   margin:0;
   font-family:'Poppins',sans-serif;
   background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
   color:#fff;
 }
-header{
+
+.hero{
   text-align:center;
-  padding:40px 20px;
+  padding:45px 20px 25px;
 }
-header h1{
-  font-size:2.5rem;
+
+.hero h1{
+  font-size:2.7rem;
+  margin:0;
   background:linear-gradient(90deg,#ff9900,#ff5e00);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
+
+.hero p{
+  color:#ddd;
+  font-size:1.05rem;
+  margin-top:12px;
+}
+
 .container{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:30px;
   padding:30px;
+  max-width:1400px;
+  margin:auto;
 }
+
 .card{
-  background:rgba(255,255,255,0.05);
+  background:rgba(255,255,255,0.06);
   backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.08);
   border-radius:20px;
   padding:20px;
   text-align:center;
@@ -38,145 +57,248 @@ header h1{
   transition:0.4s;
   box-shadow:0 10px 30px rgba(0,0,0,0.5);
 }
+
 .card:hover{
   transform:rotateY(10deg) scale(1.05);
+  box-shadow:0 18px 45px rgba(0,0,0,0.65);
 }
+
 .card img{
   width:100%;
   height:180px;
   object-fit:contain;
   margin-bottom:15px;
+  transition:.4s;
+  filter:drop-shadow(0 12px 18px rgba(0,0,0,0.45));
 }
+
+.card:hover img{
+  transform:scale(1.08);
+}
+
+.card h3{
+  min-height:62px;
+  font-size:17px;
+  line-height:1.35;
+  margin:10px 0 12px;
+}
+
 .discount{
   background:#ff003c;
-  padding:5px 10px;
+  padding:6px 12px;
   border-radius:10px;
   font-size:12px;
   display:inline-block;
+  font-weight:700;
+  letter-spacing:.3px;
 }
+
 .price{
   font-size:20px;
   font-weight:bold;
-  margin:10px 0;
+  margin:12px 0;
 }
+
+.price del{
+  color:#bbb;
+  margin-right:6px;
+  font-weight:400;
+}
+
 .btn{
   display:inline-block;
-  padding:10px 15px;
+  padding:11px 18px;
   border-radius:10px;
   background:linear-gradient(90deg,#ff9900,#ff5e00);
   color:#000;
   text-decoration:none;
   font-weight:bold;
+  box-shadow:0 0 20px rgba(255,153,0,.45);
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 0 28px rgba(255,153,0,.75);
+}
+
+.footer{
+  text-align:center;
+  color:#ccc;
+  padding:25px 15px 40px;
+  font-size:14px;
+}
+
+@media(max-width:600px){
+  .hero h1{
+    font-size:2rem;
+  }
+
+  .container{
+    padding:18px;
+    gap:22px;
+  }
 }
 </style>
 </head>
+
 <body>
 
-<div style="text-align:center;padding:20px;">
-<h2 style="color:#ff9900;font-size:2rem;">🔥 Prime Deals (Limited Time)</h2>
-<p style="color:#ccc;">Scroll & Grab Best Offers Before They’re Gone!</p>
-</div>
+<section class="hero">
+  <h1>🔥 Prime Deals 3D</h1>
+  <p>Limited-time offers — scroll and grab the best deals before they’re gone!</p>
+</section>
 
 <div class="container">
 
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/51CVuMI-YNL._AC_SL1500_.jpg" alt="Samsung Galaxy S26">
+    <h3>Samsung Galaxy S26 256GB</h3>
+    <div class="discount">11% OFF</div>
+    <div class="price"><del>$899.99</del> $799.99</div>
+    <a href="https://amzn.to/43JY98Z" class="btn" target="_blank" rel="nofollow sponsored noopener">View Deal</a>
+  </div>
 
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/61oIx4dtCXL._AC_SL1500_.jpg" alt="Shark Air Purifier">
+    <h3>Shark Air Purifier Compact Pro</h3>
+    <div class="discount">38% OFF</div>
+    <div class="price"><del>$159.99</del> $99.99</div>
+    <a href="https://amzn.to/4vl5Luz" class="btn" target="_blank" rel="nofollow sponsored noopener">View Deal</a>
+  </div>
 
-<div class="card">
-<img src="https://m.media-amazon.com/images/I/51CVuMI-YNL._AC_SL1500_.jpg">
-<h3>Samsung Galaxy S26 (256GB)</h3>
-<div class="discount">11% OFF</div>
-<div class="price"><del>$899.99</del> $799.99</div>
-<a href="https://amzn.to/43JY98Z" class="btn">View Deal</a>
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/71obecOz5OL._AC_SL1500_.jpg" alt="Philips Sonicare 7300">
+    <h3>Philips Sonicare 7300 Toothbrush</h3>
+    <div class="discount">50% OFF</div>
+    <div class="price"><del>$199.99</del> $99.96</div>
+    <a href="https://amzn.to/43PlVjO" class="btn" target="_blank" rel="nofollow sponsored noopener">View Deal</a>
+  </div>
+
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/61+oVV08eyL._AC_SL1500_.jpg" alt="Ninja Luxe Cafe Espresso Machine">
+    <h3>Ninja Luxe Café Espresso Machine</h3>
+    <div class="discount">20% OFF</div>
+    <div class="price"><del>$749.99</del> $599.00</div>
+    <a href="https://amzn.to/4g0amO3" class="btn" target="_blank" rel="nofollow sponsored noopener">View Deal</a>
+  </div>
+
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/8102rlZfwvL._AC_SL1500_.jpg" alt="ECOVACS DEEBOT T90 PRO OMNI">
+    <h3>ECOVACS DEEBOT T90 PRO OMNI</h3>
+    <div class="discount">45% OFF</div>
+    <div class="price"><del>$899.99</del> $494.99</div>
+    <a href="https://amzn.to/4b2LXnz" class="btn" target="_blank" rel="nofollow sponsored noopener">View Deal</a>
+  </div>
+
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/712JwVh74OL._SL1500_.jpg" alt="Philips Sonicare 5950">
+    <h3>Philips Sonicare 5950 Toothbrush</h3>
+    <div class="discount">45% OFF</div>
+    <div class="price"><del>$109.99</del> $59.96</div>
+    <a href="https://amzn.to/4ewmjbS" class="btn" target="_blank" rel="nofollow sponsored noopener">View Deal</a>
+  </div>
+
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/613Df8oBHQL._AC_SL1500_.jpg" alt="Vitamix Propel 750 Blender">
+    <h3>Vitamix Propel 750 Blender</h3>
+    <div class="discount">40% OFF</div>
+    <div class="price"><del>$629.95</del> $374.95</div>
+    <a href="https://amzn.to/4xIYJRV" class="btn" target="_blank" rel="nofollow sponsored noopener">View Deal</a>
+  </div>
+
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/61N7sa31L7L._AC_SL1500_.jpg" alt="TP-Link Deco 7 Pro WiFi 7 Mesh">
+    <h3>TP-Link Deco 7 Pro WiFi 7 Mesh</h3>
+    <div class="discount">28% OFF</div>
+    <div class="price"><del>$499.99</del> $357.99</div>
+    <a href="https://amzn.to/4eA6f8V" class="btn" target="_blank" rel="nofollow sponsored noopener">View Deal</a>
+  </div>
+
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/71bEcJj4DAL._AC_SL1500_.jpg" alt="WYBOT C2 Robotic Pool Cleaner">
+    <h3>WYBOT C2 Robotic Pool Cleaner</h3>
+    <div class="discount">41% OFF</div>
+    <div class="price"><del>$879.99</del> $519.98</div>
+    <a href="https://amzn.to/4voY9aF" class="btn" target="_blank" rel="nofollow sponsored noopener">View Deal</a>
+  </div>
+
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/617bWpsQJ5L._AC_SL1500_.jpg" alt="Ninja Foodi DualZone XL Air Fryer">
+    <h3>Ninja Foodi DualZone XL Air Fryer</h3>
+    <div class="discount">32% OFF</div>
+    <div class="price"><del>$249.99</del> $169.99</div>
+    <a href="https://amzn.to/4eDRfai" class="btn" target="_blank" rel="nofollow sponsored noopener">View Deal</a>
+  </div>
+
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/61-dufuuYoL._AC_SL1500_.jpg" alt="Ninja Blast Max Portable Blender">
+    <h3>Ninja Blast Max Portable Blender</h3>
+    <div class="discount">30% OFF</div>
+    <div class="price"><del>$99.99</del> $69.95</div>
+    <a href="https://amzn.to/3QQXG1P" class="btn" target="_blank" rel="nofollow sponsored noopener">View Deal</a>
+  </div>
+
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/61sFLW1CDoL._AC_SL1500_.jpg" alt="Garmin Epix Pro Gen 2 Smartwatch">
+    <h3>Garmin Epix Pro Gen 2 Smartwatch</h3>
+    <div class="discount">50% OFF</div>
+    <div class="price"><del>$999.99</del> $499.99</div>
+    <a href="https://amzn.to/4oE0Pym" class="btn" target="_blank" rel="nofollow sponsored noopener">View Deal</a>
+  </div>
+
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/718zE+OLoQL._AC_SL1500_.jpg" alt="Hybrid Active Noise Cancelling Headphones">
+    <h3>Hybrid ANC Bluetooth Headphones</h3>
+    <div class="discount">50% OFF</div>
+    <div class="price"><del>$199.99</del> $99.98</div>
+    <a href="https://amzn.to/4w3gg5E" class="btn" target="_blank" rel="nofollow sponsored noopener">View Deal</a>
+  </div>
+
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/51L4PaeYrwL._AC_SL1500_.jpg" alt="Google Nest Cam Outdoor 2 Pack">
+    <h3>Google Nest Cam Outdoor 2-Pack</h3>
+    <div class="discount">21% OFF</div>
+    <div class="price"><del>$249.99</del> $197.99</div>
+    <a href="https://amzn.to/4w9bGDg" class="btn" target="_blank" rel="nofollow sponsored noopener">View Deal</a>
+  </div>
+
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/61Zp9gGYYnL._AC_SL1500_.jpg" alt="DeLonghi Classic Signature Espresso Machine">
+    <h3>De'Longhi Classic Signature Espresso</h3>
+    <div class="discount">35% OFF</div>
+    <div class="price"><del>$229.95</del> $149.95</div>
+    <a href="https://amzn.to/4uWYnEN" class="btn" target="_blank" rel="nofollow sponsored noopener">View Deal</a>
+  </div>
+
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/81ymuEibenL._SL1500_.jpg" alt="Philips Norelco Head Shaver Pro 9000">
+    <h3>Philips Norelco Head Shaver 9000</h3>
+    <div class="discount">30% OFF</div>
+    <div class="price"><del>$149.99</del> $104.96</div>
+    <a href="https://amzn.to/3SFzuQp" class="btn" target="_blank" rel="nofollow sponsored noopener">View Deal</a>
+  </div>
+
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/71R3syECDoL._AC_SL1500_.jpg" alt="Braun Series 9 PRO+ Electric Razor">
+    <h3>Braun Series 9 PRO+ Electric Razor</h3>
+    <div class="discount">24% OFF</div>
+    <div class="price"><del>$349.94</del> $265.94</div>
+    <a href="https://amzn.to/43R6Zle" class="btn" target="_blank" rel="nofollow sponsored noopener">View Deal</a>
+  </div>
+
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/51jetcRCBBL._AC_SL1500_.jpg" alt="Ninja Woodfire Outdoor Grill">
+    <h3>Ninja Woodfire Outdoor Grill & Smoker</h3>
+    <div class="discount">24% OFF</div>
+    <div class="price"><del>$379.99</del> $289.99</div>
+    <a href="https://amzn.to/4gykOwm" class="btn" target="_blank" rel="nofollow sponsored noopener">View Deal</a>
+  </div>
+
 </div>
 
-<div class="card">
-<img src="https://m.media-amazon.com/images/I/61oIx4dtCXL._AC_SL1500_.jpg">
-<h3>Shark Air Purifier Compact Pro</h3>
-<div class="discount">38% OFF</div>
-<div class="price"><del>$159.99</del> $99.99</div>
-<a href="https://amzn.to/4vl5Luz" class="btn">View Deal</a>
-</div>
-
-<div class="card">
-<img src="https://m.media-amazon.com/images/I/71obecOz5OL._AC_SL1500_.jpg">
-<h3>Philips Sonicare 7300 Toothbrush</h3>
-<div class="discount">50% OFF</div>
-<div class="price"><del>$199.99</del> $99.96</div>
-<a href="https://amzn.to/43PlVjO" class="btn">View Deal</a>
-</div>
-
-<div class="card">
-<img src="https://m.media-amazon.com/images/I/61+oVV08eyL._AC_SL1500_.jpg">
-<h3>Ninja Luxe Café Espresso Machine</h3>
-<div class="discount">20% OFF</div>
-<div class="price"><del>$749.99</del> $599</div>
-<a href="https://amzn.to/4g0amO3" class="btn">View Deal</a>
-</div>
-
-<div class="card">
-<img src="https://m.media-amazon.com/images/I/8102rlZfwvL._AC_SL1500_.jpg">
-<h3>ECOVACS DEEBOT T90 PRO OMNI</h3>
-<div class="discount">45% OFF</div>
-<div class="price"><del>$899.99</del> $494.99</div>
-<a href="https://amzn.to/4b2LXnz" class="btn">View Deal</a>
-</div>
-
-<div class="card">
-<img src="https://m.media-amazon.com/images/I/712JwVh74OL._SL1500_.jpg">
-<h3>Philips Sonicare 5950 Toothbrush</h3>
-<div class="discount">45% OFF</div>
-<div class="price"><del>$109.99</del> $59.96</div>
-<a href="https://amzn.to/4ewmjbS" class="btn">View Deal</a>
-</div>
-
-<div class="card">
-<img src="https://m.media-amazon.com/images/I/613Df8oBHQL._AC_SL1500_.jpg">
-<h3>Vitamix Propel 750 Blender</h3>
-<div class="discount">40% OFF</div>
-<div class="price"><del>$629.95</del> $374.95</div>
-<a href="https://amzn.to/4xIYJRV" class="btn">View Deal</a>
-</div>
-
-<div class="card">
-<img src="https://m.media-amazon.com/images/I/61N7sa31L7L._AC_SL1500_.jpg">
-<h3>TP-Link Deco 7 Pro WiFi 7 Mesh</h3>
-<div class="discount">28% OFF</div>
-<div class="price"><del>$499.99</del> $357.99</div>
-<a href="https://amzn.to/4eA6f8V" class="btn">View Deal</a>
-</div>
-
-<div class="card">
-<img src="https://m.media-amazon.com/images/I/71bEcJj4DAL._AC_SL1500_.jpg">
-<h3>WYBOT C2 Robotic Pool Cleaner</h3>
-<div class="discount">41% OFF</div>
-<div class="price"><del>$879.99</del> $519.98</div>
-<a href="https://amzn.to/4voY9aF" class="btn">View Deal</a>
-</div>
-
-<div class="card">
-<img src="https://m.media-amazon.com/images/I/617bWpsQJ5L._AC_SL1500_.jpg">
-<h3>Ninja Foodi DualZone XL Air Fryer</h3>
-<div class="discount">32% OFF</div>
-<div class="price"><del>$249.99</del> $169.99</div>
-<a href="https://amzn.to/4eDRfai" class="btn">View Deal</a>
-</div>
-
-<div class="card">
-<img src="https://m.media-amazon.com/images/I/61-dufuuYoL._AC_SL1500_.jpg">
-<h3>Ninja Blast Max Portable Blender</h3>
-<div class="discount">30% OFF</div>
-<div class="price"><del>$99.99</del> $69.95</div>
-<a href="https://amzn.to/3QQXG1P" class="btn">View Deal</a>
-</div>
-
-<div class="card">
-<img src="https://m.media-amazon.com/images/I/61sFLW1CDoL._AC_SL1500_.jpg">
-<h3>Garmin Epix Pro Gen 2 Smartwatch</h3>
-<div class="discount">50% OFF</div>
-<div class="price"><del>$999.99</del> $499.99</div>
-<a href="https://amzn.to/4oE0Pym" class="btn">View Deal</a>
-</div>
-
+<div class="footer">
+  <p>As an Amazon Associate, this page may earn from qualifying purchases. Prices and discounts can change anytime.</p>
 </div>
 
 </body>
