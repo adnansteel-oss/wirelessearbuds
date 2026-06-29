@@ -9,89 +9,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
-
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
       font-family:'Poppins',sans-serif;
       color:#fff;
       overflow-x:hidden;
       background:
-        radial-gradient(circle at 10% 10%, rgba(0,210,255,.28), transparent 34%),
-        radial-gradient(circle at 90% 12%, rgba(255,195,0,.22), transparent 35%),
-        radial-gradient(circle at 50% 100%, rgba(0,255,160,.16), transparent 38%),
+        radial-gradient(circle at 10% 10%,rgba(0,210,255,.28),transparent 34%),
+        radial-gradient(circle at 90% 12%,rgba(255,195,0,.22),transparent 35%),
+        radial-gradient(circle at 50% 100%,rgba(0,255,160,.16),transparent 38%),
         linear-gradient(135deg,#020711,#071525 48%,#03060d);
     }
-
-    a{
-      color:inherit;
-      text-decoration:none;
-    }
+    a{text-decoration:none;color:inherit}
+    .container{width:92%;max-width:1240px;margin:auto}
 
     .bg-grid{
-      position:fixed;
-      inset:0;
-      z-index:-4;
+      position:fixed;inset:0;z-index:-4;
       background-image:
-        linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
       background-size:48px 48px;
-      mask-image:linear-gradient(to bottom, rgba(0,0,0,.9), rgba(0,0,0,.15));
+      mask-image:linear-gradient(to bottom,rgba(0,0,0,.9),rgba(0,0,0,.15));
     }
-
-    .glow-one,
-    .glow-two,
-    .glow-three{
-      position:fixed;
-      width:430px;
-      height:430px;
-      border-radius:50%;
-      filter:blur(125px);
-      opacity:.25;
-      z-index:-3;
-      pointer-events:none;
+    .glow-one,.glow-two,.glow-three{
+      position:fixed;width:430px;height:430px;border-radius:50%;
+      filter:blur(125px);opacity:.25;z-index:-3;pointer-events:none;
     }
-
-    .glow-one{
-      background:#00d9ff;
-      top:80px;
-      left:-120px;
-    }
-
-    .glow-two{
-      background:#ffc400;
-      top:150px;
-      right:-150px;
-    }
-
-    .glow-three{
-      background:#00ffa6;
-      bottom:-150px;
-      left:35%;
-    }
-
-    .container{
-      width:92%;
-      max-width:1240px;
-      margin:auto;
-    }
+    .glow-one{background:#00d9ff;top:80px;left:-120px}
+    .glow-two{background:#ffc400;top:150px;right:-150px}
+    .glow-three{background:#00ffa6;bottom:-150px;left:35%}
 
     header{
-      position:sticky;
-      top:0;
-      z-index:100;
+      position:sticky;top:0;z-index:100;
       background:rgba(3,8,18,.74);
       backdrop-filter:blur(18px);
       border-bottom:1px solid rgba(255,255,255,.10);
     }
-
     .nav{
       height:78px;
       display:flex;
@@ -99,7 +53,6 @@
       justify-content:space-between;
       gap:18px;
     }
-
     .logo{
       font-family:'Orbitron',sans-serif;
       font-size:1.45rem;
@@ -107,25 +60,9 @@
       letter-spacing:1px;
       text-transform:uppercase;
     }
-
-    .logo span{
-      color:#00d9ff;
-      text-shadow:0 0 25px rgba(0,217,255,.65);
-    }
-
-    .nav-links{
-      display:flex;
-      gap:24px;
-      align-items:center;
-      color:#d9f5ff;
-      font-size:.93rem;
-      font-weight:600;
-    }
-
-    .nav-links a:hover{
-      color:#00d9ff;
-    }
-
+    .logo span{color:#00d9ff;text-shadow:0 0 25px rgba(0,217,255,.65)}
+    .nav-links{display:flex;gap:24px;color:#d9f5ff;font-size:.93rem;font-weight:600}
+    .nav-links a:hover{color:#00d9ff}
     .nav-btn{
       background:linear-gradient(135deg,#00d9ff,#00ffa6);
       color:#03111d;
@@ -145,7 +82,6 @@
       align-items:center;
       padding:74px 0 65px;
     }
-
     .eyebrow{
       display:inline-flex;
       align-items:center;
@@ -157,39 +93,28 @@
       color:#aef5ff;
       font-weight:800;
       margin-bottom:22px;
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.13);
     }
-
     .pulse{
-      width:10px;
-      height:10px;
-      border-radius:50%;
+      width:10px;height:10px;border-radius:50%;
       background:#00ffa6;
       box-shadow:0 0 0 0 rgba(0,255,166,.7);
       animation:pulse 1.8s infinite;
     }
-
     @keyframes pulse{
-      0%{box-shadow:0 0 0 0 rgba(0,255,166,.7);}
-      70%{box-shadow:0 0 0 13px rgba(0,255,166,0);}
-      100%{box-shadow:0 0 0 0 rgba(0,255,166,0);}
+      0%{box-shadow:0 0 0 0 rgba(0,255,166,.7)}
+      70%{box-shadow:0 0 0 13px rgba(0,255,166,0)}
+      100%{box-shadow:0 0 0 0 rgba(0,255,166,0)}
     }
-
     h1{
       font-family:'Orbitron',sans-serif;
-      font-size:clamp(2.7rem,6vw,6.2rem);
+      font-size:clamp(2.65rem,6vw,6.1rem);
       line-height:1.02;
       letter-spacing:1px;
       text-transform:uppercase;
       margin-bottom:22px;
       text-shadow:0 18px 45px rgba(0,0,0,.6);
     }
-
-    h1 span{
-      color:#00d9ff;
-      text-shadow:0 0 35px rgba(0,217,255,.72);
-    }
-
+    h1 span{color:#00d9ff;text-shadow:0 0 35px rgba(0,217,255,.72)}
     .hero p{
       max-width:670px;
       color:#d9eaff;
@@ -197,16 +122,8 @@
       font-size:1.06rem;
       margin-bottom:30px;
     }
-
-    .hero-actions{
-      display:flex;
-      gap:16px;
-      flex-wrap:wrap;
-      margin-bottom:30px;
-    }
-
-    .primary-btn,
-    .secondary-btn{
+    .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:30px}
+    .primary-btn,.secondary-btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
@@ -218,27 +135,17 @@
       letter-spacing:.4px;
       transition:.3s ease;
     }
-
     .primary-btn{
       background:linear-gradient(135deg,#00d9ff,#00ffa6);
       color:#03111d;
       box-shadow:0 20px 45px rgba(0,217,255,.34);
     }
-
-    .primary-btn:hover{
-      transform:translateY(-5px) scale(1.02);
-      box-shadow:0 28px 65px rgba(0,217,255,.5);
-    }
-
+    .primary-btn:hover{transform:translateY(-5px) scale(1.02)}
     .secondary-btn{
       border:1px solid rgba(255,255,255,.18);
       background:rgba(255,255,255,.08);
     }
-
-    .secondary-btn:hover{
-      background:rgba(255,255,255,.15);
-      transform:translateY(-4px);
-    }
+    .secondary-btn:hover{background:rgba(255,255,255,.15);transform:translateY(-4px)}
 
     .mini-points{
       display:grid;
@@ -246,7 +153,6 @@
       gap:14px;
       max-width:690px;
     }
-
     .mini-points div{
       background:rgba(255,255,255,.08);
       border:1px solid rgba(255,255,255,.12);
@@ -254,19 +160,17 @@
       padding:13px 14px;
       font-weight:800;
       color:#eefaff;
-      backdrop-filter:blur(12px);
       text-align:center;
     }
 
     .hero-showcase{
       position:relative;
-      min-height:620px;
+      min-height:660px;
       perspective:1200px;
     }
-
     .hero-card{
       position:absolute;
-      width:46%;
+      width:42%;
       border-radius:28px;
       background:linear-gradient(145deg,rgba(255,255,255,.18),rgba(255,255,255,.045));
       border:1px solid rgba(255,255,255,.18);
@@ -275,7 +179,6 @@
       box-shadow:0 40px 90px rgba(0,0,0,.62);
       transition:.4s;
     }
-
     .hero-card img{
       width:100%;
       aspect-ratio:1/1;
@@ -285,39 +188,12 @@
       background:#fff;
       padding:8px;
     }
-
-    .hero-card:nth-child(1){
-      left:6%;
-      top:4%;
-      transform:rotateY(-12deg) rotateZ(-5deg);
-      z-index:4;
-    }
-
-    .hero-card:nth-child(2){
-      right:6%;
-      top:14%;
-      transform:rotateY(10deg) rotateZ(5deg);
-      z-index:3;
-    }
-
-    .hero-card:nth-child(3){
-      left:1%;
-      bottom:8%;
-      transform:rotateY(-8deg) rotateZ(6deg);
-      z-index:2;
-    }
-
-    .hero-card:nth-child(4){
-      right:12%;
-      bottom:0;
-      transform:rotateY(13deg) rotateZ(-5deg);
-      z-index:1;
-    }
-
-    .hero-card:hover{
-      transform:rotateY(0deg) rotateZ(0deg) translateY(-10px);
-      z-index:10;
-    }
+    .hero-card:nth-child(1){left:4%;top:4%;transform:rotateY(-12deg) rotateZ(-5deg);z-index:6}
+    .hero-card:nth-child(2){right:5%;top:8%;transform:rotateY(10deg) rotateZ(5deg);z-index:5}
+    .hero-card:nth-child(3){left:2%;top:39%;transform:rotateY(-8deg) rotateZ(5deg);z-index:4}
+    .hero-card:nth-child(4){right:10%;top:45%;transform:rotateY(12deg) rotateZ(-5deg);z-index:3}
+    .hero-card:nth-child(5){left:30%;bottom:0;transform:rotateY(-5deg) rotateZ(2deg);z-index:2}
+    .hero-card:hover{transform:rotateY(0deg) rotateZ(0deg) translateY(-10px);z-index:10}
 
     .floating-badge{
       position:absolute;
@@ -337,15 +213,8 @@
       text-transform:uppercase;
     }
 
-    .section{
-      padding:78px 0;
-    }
-
-    .section-title{
-      text-align:center;
-      margin-bottom:46px;
-    }
-
+    .section{padding:78px 0}
+    .section-title{text-align:center;margin-bottom:46px}
     .section-title h2{
       font-family:'Orbitron',sans-serif;
       font-size:clamp(2.1rem,5vw,4.1rem);
@@ -353,14 +222,10 @@
       letter-spacing:1px;
       margin-bottom:14px;
     }
-
-    .section-title h2 span{
-      color:#00d9ff;
-    }
-
+    .section-title h2 span{color:#00d9ff}
     .section-title p{
       color:#cfe7ff;
-      max-width:820px;
+      max-width:850px;
       margin:auto;
       line-height:1.8;
     }
@@ -370,7 +235,6 @@
       grid-template-columns:repeat(4,1fr);
       gap:22px;
     }
-
     .feature{
       position:relative;
       overflow:hidden;
@@ -382,45 +246,41 @@
       box-shadow:0 30px 70px rgba(0,0,0,.32);
       transition:.35s ease;
     }
-
-    .feature:hover{
-      transform:translateY(-10px);
-      border-color:rgba(0,217,255,.52);
-    }
-
-    .feature::after{
-      content:"";
-      position:absolute;
-      width:120px;
-      height:120px;
-      background:#00d9ff;
-      filter:blur(60px);
-      opacity:.16;
-      right:-30px;
-      bottom:-30px;
-    }
-
+    .feature:hover{transform:translateY(-10px);border-color:rgba(0,217,255,.52)}
     .feature-icon{
-      width:54px;
-      height:54px;
-      display:grid;
-      place-items:center;
+      width:54px;height:54px;
+      display:grid;place-items:center;
       border-radius:16px;
       background:rgba(0,217,255,.16);
       border:1px solid rgba(0,217,255,.35);
       font-size:1.8rem;
       margin-bottom:20px;
     }
+    .feature h3{font-size:1.12rem;margin-bottom:12px}
+    .feature p{color:#d4e8f8;line-height:1.7;font-size:.94rem}
 
-    .feature h3{
-      font-size:1.12rem;
-      margin-bottom:12px;
+    .filter-bar{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:36px;
     }
-
-    .feature p{
-      color:#d4e8f8;
-      line-height:1.7;
-      font-size:.94rem;
+    .filter-btn{
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(255,255,255,.08);
+      color:#fff;
+      padding:12px 18px;
+      border-radius:50px;
+      font-weight:800;
+      cursor:pointer;
+      transition:.25s ease;
+    }
+    .filter-btn:hover,.filter-btn.active{
+      background:linear-gradient(135deg,#00d9ff,#00ffa6);
+      color:#03111d;
+      border-color:transparent;
+      box-shadow:0 12px 30px rgba(0,217,255,.28);
     }
 
     .products-grid{
@@ -428,7 +288,6 @@
       grid-template-columns:repeat(2,1fr);
       gap:30px;
     }
-
     .product-card{
       position:relative;
       overflow:hidden;
@@ -438,7 +297,7 @@
       align-items:center;
       border-radius:32px;
       background:
-        radial-gradient(circle at 15% 0%, rgba(0,217,255,.18), transparent 38%),
+        radial-gradient(circle at 15% 0%,rgba(0,217,255,.18),transparent 38%),
         linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.045));
       border:1px solid rgba(255,255,255,.13);
       box-shadow:0 34px 78px rgba(0,0,0,.42);
@@ -446,25 +305,11 @@
       padding:22px;
       transition:.35s ease;
     }
-
     .product-card:hover{
       transform:translateY(-10px);
       border-color:rgba(0,217,255,.52);
       box-shadow:0 45px 95px rgba(0,0,0,.58);
     }
-
-    .product-card::before{
-      content:"";
-      position:absolute;
-      width:180px;
-      height:180px;
-      background:#00ffa6;
-      filter:blur(90px);
-      opacity:.13;
-      right:-40px;
-      bottom:-40px;
-    }
-
     .product-img-box{
       position:relative;
       z-index:2;
@@ -475,11 +320,7 @@
       transform:rotate(-2deg);
       transition:.35s ease;
     }
-
-    .product-card:hover .product-img-box{
-      transform:rotate(0deg) scale(1.03);
-    }
-
+    .product-card:hover .product-img-box{transform:rotate(0deg) scale(1.03)}
     .product-img-box img{
       width:100%;
       aspect-ratio:1/1;
@@ -487,7 +328,6 @@
       display:block;
       border-radius:18px;
     }
-
     .tag{
       position:absolute;
       left:12px;
@@ -500,34 +340,11 @@
       font-size:.75rem;
       font-weight:900;
       text-transform:uppercase;
-      backdrop-filter:blur(12px);
     }
-
-    .product-content{
-      position:relative;
-      z-index:2;
-    }
-
-    .product-content h3{
-      font-size:1.2rem;
-      line-height:1.35;
-      margin-bottom:12px;
-    }
-
-    .product-content p{
-      color:#d7e9f5;
-      line-height:1.65;
-      font-size:.94rem;
-      margin-bottom:16px;
-    }
-
-    .chips{
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-      margin-bottom:18px;
-    }
-
+    .product-content{position:relative;z-index:2}
+    .product-content h3{font-size:1.2rem;line-height:1.35;margin-bottom:12px}
+    .product-content p{color:#d7e9f5;line-height:1.65;font-size:.94rem;margin-bottom:16px}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
     .chips span{
       padding:7px 10px;
       border-radius:50px;
@@ -537,13 +354,11 @@
       font-size:.78rem;
       font-weight:800;
     }
-
     .shop-btn{
       display:inline-flex;
       justify-content:center;
       align-items:center;
       width:100%;
-      text-align:center;
       background:linear-gradient(135deg,#00d9ff,#00ffa6);
       color:#03111d;
       padding:14px 16px;
@@ -553,12 +368,7 @@
       box-shadow:0 15px 34px rgba(0,217,255,.28);
       transition:.25s ease;
     }
-
-    .shop-btn:hover{
-      transform:translateY(-3px);
-      box-shadow:0 20px 45px rgba(0,217,255,.44);
-    }
-
+    .shop-btn:hover{transform:translateY(-3px)}
     details{
       border-top:1px solid rgba(255,255,255,.10);
       padding-top:12px;
@@ -566,18 +376,8 @@
       color:#d7e9f5;
       font-size:.9rem;
     }
-
-    summary{
-      cursor:pointer;
-      color:#b8f7ff;
-      font-weight:900;
-    }
-
-    details ul{
-      padding-left:18px;
-      margin-top:10px;
-      line-height:1.75;
-    }
+    summary{cursor:pointer;color:#b8f7ff;font-weight:900}
+    details ul{padding-left:18px;margin-top:10px;line-height:1.75}
 
     .style-section{
       display:grid;
@@ -585,14 +385,13 @@
       gap:38px;
       align-items:center;
       background:
-        radial-gradient(circle at 20% 15%, rgba(0,217,255,.22), transparent 35%),
+        radial-gradient(circle at 20% 15%,rgba(0,217,255,.22),transparent 35%),
         linear-gradient(145deg,rgba(255,255,255,.11),rgba(255,255,255,.045));
       border:1px solid rgba(255,255,255,.13);
       border-radius:34px;
       padding:38px;
       box-shadow:0 40px 85px rgba(0,0,0,.42);
     }
-
     .style-section h2{
       font-family:'Orbitron',sans-serif;
       font-size:clamp(2rem,4.3vw,3.8rem);
@@ -600,42 +399,17 @@
       text-transform:uppercase;
       margin-bottom:18px;
     }
-
-    .style-section h2 span{
-      color:#00d9ff;
-    }
-
-    .style-section p{
-      color:#d8e9f5;
-      line-height:1.85;
-      margin-bottom:18px;
-    }
-
-    .style-list{
-      list-style:none;
-      margin-top:22px;
-    }
-
-    .style-list li{
-      margin-bottom:13px;
-      color:#eefcff;
-      font-weight:700;
-    }
-
-    .style-list li::before{
-      content:"✔";
-      color:#00ffa6;
-      margin-right:11px;
-      font-weight:900;
-    }
-
+    .style-section h2 span{color:#00d9ff}
+    .style-section p{color:#d8e9f5;line-height:1.85;margin-bottom:18px}
+    .style-list{list-style:none;margin-top:22px}
+    .style-list li{margin-bottom:13px;color:#eefcff;font-weight:700}
+    .style-list li::before{content:"✔";color:#00ffa6;margin-right:11px;font-weight:900}
     .style-visual{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:15px;
       transform:rotate(2deg);
     }
-
     .style-visual img{
       width:100%;
       aspect-ratio:1/1;
@@ -653,12 +427,11 @@
       padding:72px 25px;
       border-radius:38px;
       background:
-        radial-gradient(circle at 50% 0%, rgba(0,217,255,.35), transparent 42%),
+        radial-gradient(circle at 50% 0%,rgba(0,217,255,.35),transparent 42%),
         linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.04));
       border:1px solid rgba(255,255,255,.14);
       box-shadow:0 45px 95px rgba(0,0,0,.46);
     }
-
     .cta::before{
       content:"TRENDING GADGETS";
       position:absolute;
@@ -671,7 +444,6 @@
       opacity:.045;
       pointer-events:none;
     }
-
     .cta h2{
       position:relative;
       font-family:'Orbitron',sans-serif;
@@ -679,7 +451,6 @@
       text-transform:uppercase;
       margin-bottom:16px;
     }
-
     .cta p{
       position:relative;
       color:#d8e9f5;
@@ -687,14 +458,7 @@
       margin:0 auto 30px;
       line-height:1.8;
     }
-
-    .amazon-note{
-      margin-top:18px;
-      color:#b8cadc;
-      font-size:.86rem;
-      position:relative;
-    }
-
+    .amazon-note{margin-top:18px;color:#b8cadc;font-size:.86rem;position:relative}
     footer{
       padding:35px 0;
       text-align:center;
@@ -704,7 +468,6 @@
       margin-top:70px;
       line-height:1.7;
     }
-
     .sticky-mobile{
       display:none;
       position:fixed;
@@ -723,92 +486,30 @@
     }
 
     @media(max-width:1050px){
-      .hero,
-      .style-section{
-        grid-template-columns:1fr;
-      }
-
-      .hero-showcase{
-        min-height:560px;
-      }
-
-      .products-grid{
-        grid-template-columns:1fr;
-      }
-
-      .feature-grid{
-        grid-template-columns:repeat(2,1fr);
-      }
+      .hero,.style-section{grid-template-columns:1fr}
+      .hero-showcase{min-height:660px}
+      .products-grid{grid-template-columns:1fr}
+      .feature-grid{grid-template-columns:repeat(2,1fr)}
     }
-
     @media(max-width:760px){
-      .nav-links{
-        display:none;
-      }
-
-      .hero{
-        padding-top:48px;
-      }
-
-      .hero-showcase{
-        min-height:500px;
-      }
-
-      .mini-points{
-        grid-template-columns:1fr;
-      }
-
-      .hero-actions a{
-        width:100%;
-      }
-
-      .product-card{
-        grid-template-columns:1fr;
-      }
-
-      .sticky-mobile{
-        display:block;
-      }
-
-      body{
-        padding-bottom:78px;
-      }
+      .nav-links{display:none}
+      .hero{padding-top:48px}
+      .hero-showcase{min-height:600px}
+      .mini-points{grid-template-columns:1fr}
+      .hero-actions a{width:100%}
+      .product-card{grid-template-columns:1fr}
+      .sticky-mobile{display:block}
+      body{padding-bottom:78px}
     }
-
     @media(max-width:560px){
-      .nav{
-        height:70px;
-      }
-
-      .logo{
-        font-size:1.05rem;
-      }
-
-      .nav-btn{
-        padding:10px 14px;
-        font-size:.75rem;
-      }
-
-      .feature-grid{
-        grid-template-columns:1fr;
-      }
-
-      .hero-showcase{
-        min-height:430px;
-      }
-
-      .hero-card{
-        width:54%;
-        padding:10px;
-      }
-
-      .style-section{
-        padding:24px;
-      }
-
-      .style-visual{
-        gap:10px;
-      }
+      .nav{height:70px}
+      .logo{font-size:1.05rem}
+      .nav-btn{padding:10px 14px;font-size:.75rem}
+      .feature-grid{grid-template-columns:1fr}
+      .hero-showcase{min-height:520px}
+      .hero-card{width:52%;padding:10px}
+      .style-section{padding:24px}
+      .style-visual{gap:10px}
     }
   </style>
 </head>
@@ -841,7 +542,7 @@
       <div>
         <div class="eyebrow">
           <span class="pulse"></span>
-          Smart Finds For Home, Travel & Everyday Life
+          Smart Finds For Home, Kitchen, Travel & Outdoor Life
         </div>
 
         <h1>
@@ -851,7 +552,7 @@
 
         <p>
           Discover practical Amazon finds that make daily life easier, cleaner, cooler, and more convenient.
-          From shoe cleaning bags and ice cube makers to hydration backpacks and fast charging cables,
+          From cleaning tools and kitchen gadgets to travel bottles, smart glasses, hydration gear, and charging accessories,
           this collection is made for smart everyday use.
         </p>
 
@@ -862,7 +563,7 @@
 
         <div class="mini-points">
           <div>Home Essentials</div>
-          <div>Outdoor Ready</div>
+          <div>Kitchen Helpers</div>
           <div>Travel Friendly</div>
         </div>
       </div>
@@ -875,15 +576,19 @@
         </div>
 
         <div class="hero-card">
-          <img src="https://m.media-amazon.com/images/I/713FgG-q34L._AC_SL1500_.jpg" alt="48 ice cube maker">
+          <img src="https://m.media-amazon.com/images/I/61USeg8ekSL._AC_SL1500_.jpg" alt="48 ice cube maker">
         </div>
 
         <div class="hero-card">
-          <img src="https://m.media-amazon.com/images/I/81cG9Z41ptL._AC_SL1500_.jpg" alt="Hydration backpack">
+          <img src="https://m.media-amazon.com/images/I/91b--zgnJoL._AC_SL1500_.jpg" alt="Electric BBQ grill brush">
         </div>
 
         <div class="hero-card">
-          <img src="https://m.media-amazon.com/images/I/71HXP2i7s0L._SL1500_.jpg" alt="2 in 1 fast charging cable">
+          <img src="https://m.media-amazon.com/images/I/71Nks0VIyFL._AC_SL1500_.jpg" alt="Travel dispenser bottle">
+        </div>
+
+        <div class="hero-card">
+          <img src="https://m.media-amazon.com/images/I/61JInT6cGJL._AC_SL1500_.jpg" alt="POV camera glasses">
         </div>
       </div>
     </section>
@@ -892,8 +597,9 @@
       <div class="section-title">
         <h2>Why These <span>Gadgets Stand Out</span></h2>
         <p>
-          This collection focuses on products that solve simple daily problems: cleaning shoes easily,
-          making drinks better, staying hydrated outdoors, and charging devices faster with less clutter.
+          This collection focuses on products that solve real daily problems: cleaning shoes,
+          making drinks better, staying hydrated outdoors, charging devices faster,
+          cleaning grills, prepping food, removing grime, and traveling lighter.
         </p>
       </div>
 
@@ -901,25 +607,25 @@
         <div class="feature">
           <div class="feature-icon">🧼</div>
           <h3>Cleaner Daily Life</h3>
-          <p>Helpful tools for laundry, shoes, home routines, and keeping your essentials fresh.</p>
+          <p>Useful cleaning tools for shoes, cars, kitchens, bathrooms, sofas, and home routines.</p>
         </div>
 
         <div class="feature">
-          <div class="feature-icon">🧊</div>
-          <h3>Better Drinks</h3>
-          <p>Make and store ice easily for coffee, cocktails, water bottles, parties, and outdoor use.</p>
+          <div class="feature-icon">🍳</div>
+          <h3>Kitchen Helpers</h3>
+          <p>Smart tools for drinks, ingredient prep, BBQ cleaning, and everyday kitchen convenience.</p>
         </div>
 
         <div class="feature">
-          <div class="feature-icon">🚴</div>
-          <h3>Outdoor Convenience</h3>
-          <p>Lightweight hydration gear for hiking, cycling, running, climbing, and active days.</p>
+          <div class="feature-icon">🎒</div>
+          <h3>Travel Ready</h3>
+          <p>Compact gadgets for gym bags, carry-ons, outdoor use, hiking, cycling, and business trips.</p>
         </div>
 
         <div class="feature">
           <div class="feature-icon">⚡</div>
-          <h3>Smart Charging</h3>
-          <p>Fast charging, phone stand support, right-angle design, and travel-friendly cable use.</p>
+          <h3>Smart Convenience</h3>
+          <p>Fast charging, hands-free recording, portable design, and time-saving everyday solutions.</p>
         </div>
       </div>
     </section>
@@ -928,161 +634,21 @@
       <div class="section-title">
         <h2>Shop The <span>Trending Gadgets</span></h2>
         <p>
-          Each product card includes quick benefits and a direct Amazon button. No price is shown because Amazon prices can change.
+          Each product card includes quick benefits and a direct Amazon button.
+          No price is shown because Amazon prices can change.
         </p>
       </div>
 
-      <div class="products-grid">
-
-        <article class="product-card">
-          <div class="product-img-box">
-            <span class="tag">Laundry Gadget</span>
-            <img src="https://m.media-amazon.com/images/I/711bA63b7EL._AC_SL1500_.jpg" alt="Shoe Washing Machine Bag Laundry Shoe Bag">
-          </div>
-
-          <div class="product-content">
-            <h3>Shoe Washing Machine Bag for Washer & Dryer</h3>
-            <p>
-              A reusable 2-piece shoe cleaning bag designed to help clean sneakers and casual shoes in the washing machine.
-              The mesh holes and soft fibers support 360° deep cleaning while helping protect shoes during the wash cycle.
-            </p>
-
-            <div class="chips">
-              <span>2PC Reusable</span>
-              <span>360° Cleaning</span>
-              <span>Self-Locking Zipper</span>
-              <span>Washer & Dryer Use</span>
-            </div>
-
-            <a class="shop-btn" href="https://amzn.to/3QPwAIr" target="_blank" rel="nofollow sponsored noopener">
-              Shop on Amazon
-            </a>
-
-            <details>
-              <summary>View quick details</summary>
-              <ul>
-                <li>Side-opening zipper design for easier shoe loading.</li>
-                <li>Invisible zipper can be tucked away to reduce snagging.</li>
-                <li>Sandwich mesh and fluffy fibers help improve cleaning.</li>
-                <li>Large size design fits many sneakers, tennis shoes, sports shoes, and casual shoes.</li>
-                <li>Helps reduce scuffs, tangles, and drum impact during machine washing.</li>
-              </ul>
-            </details>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-img-box">
-            <span class="tag">Kitchen Gadget</span>
-            <img src="https://m.media-amazon.com/images/I/713FgG-q34L._AC_SL1500_.jpg" alt="48 Ice Cube Maker with Easy Press Lid">
-          </div>
-
-          <div class="product-content">
-            <h3>48 Ice Cube Maker with Easy Press Lid</h3>
-            <p>
-              A double-layer ice cube tray and storage bin made for home drinks, cocktails, coffee, parties,
-              picnics, camping, and outdoor use. Make, store, and carry ice in one compact set.
-            </p>
-
-            <div class="chips">
-              <span>48 Ice Cubes</span>
-              <span>Easy Press Lid</span>
-              <span>Storage Bin</span>
-              <span>Insulated Bag</span>
-            </div>
-
-            <a class="shop-btn" href="https://amzn.to/3SxFSJK" target="_blank" rel="nofollow sponsored noopener">
-              Shop on Amazon
-            </a>
-
-            <details>
-              <summary>View quick details</summary>
-              <ul>
-                <li>2-in-1 ice tray and storage container design.</li>
-                <li>One-press release helps remove ice cubes easily.</li>
-                <li>Food-grade BPA-free material for daily drink use.</li>
-                <li>Includes ice tongs and insulated carry bag.</li>
-                <li>Useful for whiskey, cocktails, coffee, beverages, parties, and outdoor events.</li>
-              </ul>
-            </details>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-img-box">
-            <span class="tag">Outdoor Gear</span>
-            <img src="https://m.media-amazon.com/images/I/81cG9Z41ptL._AC_SL1500_.jpg" alt="MIYCOO Hydration Backpack">
-          </div>
-
-          <div class="product-content">
-            <h3>MIYCOO Hydration Backpack with 2L Water Bladder</h3>
-            <p>
-              A lightweight hydration backpack designed for hiking, cycling, climbing, running,
-              biking, riding, and marathon training. It includes a 2L bladder and multiple pockets for essentials.
-            </p>
-
-            <div class="chips">
-              <span>2L Bladder</span>
-              <span>Leak-Proof</span>
-              <span>Lightweight</span>
-              <span>Insulated Pocket</span>
-            </div>
-
-            <a class="shop-btn" href="https://amzn.to/4xYLtcg" target="_blank" rel="nofollow sponsored noopener">
-              Shop on Amazon
-            </a>
-
-            <details>
-              <summary>View quick details</summary>
-              <ul>
-                <li>Breathable mesh shoulder straps help with airflow and comfort.</li>
-                <li>Wide opening bladder design helps with filling and cleaning.</li>
-                <li>BPA-free and odorless 2L water bladder.</li>
-                <li>Insulated bladder pocket can help keep water cooler for hours.</li>
-                <li>Pockets for phone, keys, snacks, towels, sunglasses, and more.</li>
-              </ul>
-            </details>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-img-box">
-            <span class="tag">Tech Gadget</span>
-            <img src="https://m.media-amazon.com/images/I/71HXP2i7s0L._SL1500_.jpg" alt="2 in 1 Invisible Stand Fast Charging Cable">
-          </div>
-
-          <div class="product-content">
-            <h3>2-in-1 Invisible Stand Fast Charging Cable 240W Type-C</h3>
-            <p>
-              A Type-C braided fast charging cable with a hidden foldable phone stand built into the cord.
-              Great for gaming, video watching, calls, office use, bedside charging, and travel.
-            </p>
-
-            <div class="chips">
-              <span>240W Fast Charging</span>
-              <span>Built-in Stand</span>
-              <span>Right-Angle USB-C</span>
-              <span>2 Pack</span>
-            </div>
-
-            <a class="shop-btn" href="https://amzn.to/4b9zpe7" target="_blank" rel="nofollow sponsored noopener">
-              Shop on Amazon
-            </a>
-
-            <details>
-              <summary>View quick details</summary>
-              <ul>
-                <li>Hidden foldable phone stand for hands-free viewing.</li>
-                <li>240W output for fast charging supported Type-C devices.</li>
-                <li>90° right-angle USB-C connector reduces port strain.</li>
-                <li>Braided nylon design helps reduce tangling and daily wear.</li>
-                <li>Useful for phones, tablets, laptops, gaming, office, and travel.</li>
-              </ul>
-            </details>
-          </div>
-        </article>
-
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="Home">Home</button>
+        <button class="filter-btn" data-filter="Kitchen">Kitchen</button>
+        <button class="filter-btn" data-filter="Outdoor">Outdoor</button>
+        <button class="filter-btn" data-filter="Tech">Tech</button>
+        <button class="filter-btn" data-filter="Travel">Travel</button>
       </div>
+
+      <div class="products-grid" id="productsGrid"></div>
     </section>
 
     <section class="container section" id="useful">
@@ -1094,26 +660,28 @@
           </h2>
 
           <p>
-            The best trending gadgets are not always expensive. Sometimes they are simple products
+            The best trending gadgets are not always complicated. Sometimes they are simple products
             that save time, reduce effort, and make daily routines smoother.
           </p>
 
           <p>
-            These items are great for people who love useful Amazon finds, home hacks, travel accessories,
-            outdoor gear, cleaning tools, and practical tech gadgets.
+            These items are great for people who love useful Amazon finds, home hacks,
+            kitchen gadgets, cleaning tools, travel accessories, outdoor gear, and practical tech products.
           </p>
 
           <ul class="style-list">
             <li>Use the shoe bag to clean sneakers with less hand scrubbing.</li>
             <li>Use the ice cube maker for drinks, parties, camping, and picnics.</li>
-            <li>Use the hydration backpack for outdoor activity and training.</li>
-            <li>Use the 2-in-1 charging cable for gaming, office, travel, and videos.</li>
+            <li>Use the BBQ cleaner to refresh grill grates faster.</li>
+            <li>Use the kitchen shears to prep vegetables, meat, and ingredients quickly.</li>
+            <li>Use the foam cleaner for car interiors, kitchens, bathrooms, and upholstery.</li>
+            <li>Use the travel dispenser to carry shampoo, lotion, skincare, and body wash in one bottle.</li>
           </ul>
         </div>
 
         <div class="style-visual">
-          <img src="https://m.media-amazon.com/images/I/711bA63b7EL._AC_SL1500_.jpg" alt="Shoe washing bag">
-          <img src="https://m.media-amazon.com/images/I/713FgG-q34L._AC_SL1500_.jpg" alt="Ice cube maker">
+          <img src="https://m.media-amazon.com/images/I/61-FcyGCyNL._AC_SL1000_.jpg" alt="Foam cleaner">
+          <img src="https://m.media-amazon.com/images/I/61GM0mz0-BL._AC_SL1500_.jpg" alt="Kitchen shears">
           <img src="https://m.media-amazon.com/images/I/81cG9Z41ptL._AC_SL1500_.jpg" alt="Hydration backpack">
           <img src="https://m.media-amazon.com/images/I/71HXP2i7s0L._SL1500_.jpg" alt="Fast charging cable">
         </div>
@@ -1125,8 +693,8 @@
         <h2>Upgrade Your Daily Routine</h2>
 
         <p>
-          Pick the product that fits your lifestyle and check the latest availability, shipping,
-          customer reviews, and current offer directly on Amazon.
+          Pick the product that fits your lifestyle and check the latest availability,
+          shipping, customer reviews, and current offer directly on Amazon.
         </p>
 
         <a class="primary-btn" href="#gadgets">🛒 View All Products</a>
@@ -1150,6 +718,210 @@
       </p>
     </div>
   </footer>
+
+  <script>
+    const products = [
+      {
+        image: "https://m.media-amazon.com/images/I/711bA63b7EL._AC_SL1500_.jpg",
+        title: "Shoe Washing Machine Bag for Washer & Dryer",
+        tag: "Laundry Gadget",
+        filters: ["Home"],
+        desc: "A reusable 2-piece shoe cleaning bag designed to help clean sneakers and casual shoes in the washing machine. The mesh holes and soft fibers support 360° deep cleaning while helping protect shoes during the wash cycle.",
+        chips: ["2PC Reusable", "360° Cleaning", "Self-Locking Zipper", "Washer & Dryer"],
+        details: [
+          "Side-opening zipper design for easier shoe loading.",
+          "Invisible zipper can be tucked away to reduce snagging.",
+          "Sandwich mesh and fluffy fibers help improve cleaning.",
+          "Large size design fits many sneakers, sports shoes, and casual shoes.",
+          "Helps reduce scuffs, tangles, and drum impact during machine washing."
+        ],
+        link: "https://amzn.to/3QPwAIr"
+      },
+      {
+        image: "https://m.media-amazon.com/images/I/61USeg8ekSL._AC_SL1500_.jpg",
+        title: "48 Ice Cube Maker with Easy Press Lid",
+        tag: "Kitchen Gadget",
+        filters: ["Kitchen", "Home", "Travel"],
+        desc: "A double-layer ice cube tray and storage bin made for home drinks, cocktails, coffee, parties, picnics, camping, and outdoor use. Make, store, and carry ice in one compact set.",
+        chips: ["48 Ice Cubes", "Easy Press Lid", "Storage Bin", "Insulated Bag"],
+        details: [
+          "2-in-1 ice tray and storage container design.",
+          "One-press release helps remove ice cubes easily.",
+          "Food-grade BPA-free material for daily drink use.",
+          "Includes ice tongs and insulated carry bag.",
+          "Useful for cocktails, coffee, beverages, parties, and outdoor events."
+        ],
+        link: "https://amzn.to/3SxFSJK"
+      },
+      {
+        image: "https://m.media-amazon.com/images/I/81cG9Z41ptL._AC_SL1500_.jpg",
+        title: "MIYCOO Hydration Backpack with 2L Water Bladder",
+        tag: "Outdoor Gear",
+        filters: ["Outdoor", "Travel"],
+        desc: "A lightweight hydration backpack designed for hiking, cycling, climbing, running, biking, riding, and marathon training. It includes a 2L bladder and multiple pockets for essentials.",
+        chips: ["2L Bladder", "Leak-Proof", "Lightweight", "Insulated Pocket"],
+        details: [
+          "Breathable mesh shoulder straps help with airflow and comfort.",
+          "Wide opening bladder design helps with filling and cleaning.",
+          "BPA-free and odorless 2L water bladder.",
+          "Insulated bladder pocket can help keep water cooler for hours.",
+          "Pockets for phone, keys, snacks, towels, sunglasses, and more."
+        ],
+        link: "https://amzn.to/4xYLtcg"
+      },
+      {
+        image: "https://m.media-amazon.com/images/I/71HXP2i7s0L._SL1500_.jpg",
+        title: "2-in-1 Invisible Stand Fast Charging Cable 240W Type-C",
+        tag: "Tech Gadget",
+        filters: ["Tech", "Travel"],
+        desc: "A Type-C braided fast charging cable with a hidden foldable phone stand built into the cord. Great for gaming, video watching, calls, office use, bedside charging, and travel.",
+        chips: ["240W Charging", "Built-in Stand", "Right-Angle USB-C", "2 Pack"],
+        details: [
+          "Hidden foldable phone stand for hands-free viewing.",
+          "240W output for supported Type-C devices.",
+          "90° right-angle USB-C connector helps reduce port strain.",
+          "Braided nylon design helps reduce tangling and daily wear.",
+          "Useful for phones, tablets, laptops, gaming, office, and travel."
+        ],
+        link: "https://amzn.to/4b9zpe7"
+      },
+      {
+        image: "https://m.media-amazon.com/images/I/91b--zgnJoL._AC_SL1500_.jpg",
+        title: "Misshappy Electric BBQ Grill Brush Cordless Grill Cleaner",
+        tag: "BBQ Gadget",
+        filters: ["Outdoor", "Kitchen"],
+        desc: "A cordless electric BBQ grill cleaner with 4000mAh battery, 2-speed performance, 800RPM cleaning, scraper, LED light, LED display, and bristle-free design for outdoor grills.",
+        chips: ["4000mAh Battery", "800RPM", "LED Light", "Bristle-Free"],
+        details: [
+          "Ergonomic handle helps reduce wrist fatigue during grill cleaning.",
+          "Serrated scraper helps remove burnt-on food and grime.",
+          "Smart anti-stall function supports stable performance under pressure.",
+          "Rechargeable battery supports whole grill cleanup in one go.",
+          "Works for porcelain, cast iron, and stainless steel outdoor grills."
+        ],
+        link: "https://amzn.to/3R7anWo"
+      },
+      {
+        image: "https://m.media-amazon.com/images/I/61GM0mz0-BL._AC_SL1500_.jpg",
+        title: "Professional 8-Inch Kitchen Shears with Built-in Cutting Board",
+        tag: "Kitchen Tool",
+        filters: ["Kitchen", "Home"],
+        desc: "A multi-purpose kitchen scissors tool with built-in cutting board, designed for vegetables, fruits, meat, and ingredient prep. Compact, sharp, easy to clean, and space-saving.",
+        chips: ["2-in-1 Design", "Stainless Steel", "Safety Lock", "Easy Clean"],
+        details: [
+          "Combines sharp blades with an integrated board for faster prep.",
+          "Useful for vegetables, fruits, meat, and daily ingredient cutting.",
+          "High-quality stainless steel blades help retain sharpness.",
+          "Safety lock keeps blades secure when stored.",
+          "Detachable design helps make cleaning simple and convenient."
+        ],
+        link: "https://amzn.to/4v82RZo"
+      },
+      {
+        image: "https://m.media-amazon.com/images/I/61-FcyGCyNL._AC_SL1000_.jpg",
+        title: "4-in-1 Multi-Enzyme Foam No-Rinse Cleaner",
+        tag: "Cleaning Gadget",
+        filters: ["Home"],
+        desc: "A portable all-purpose foam cleaning spray made for car interiors, kitchen grease, bathroom tiles, sofa upholstery, leather, fabric, vinyl, plastic, and tile surfaces.",
+        chips: ["No-Rinse Foam", "4-in-1 Cleaner", "Portable 5oz", "Multi-Surface"],
+        details: [
+          "Thick foam helps break down stains, grease, dirt, and grime.",
+          "Spray, wait 30 to 60 seconds, and wipe away dirt.",
+          "Useful for car interior, kitchen, bathroom, sofa, and upholstery cleaning.",
+          "Compact bottle is easy to carry for quick cleanups.",
+          "Non-residue formula leaves surfaces clean and ready to use."
+        ],
+        link: "https://amzn.to/4xUjRoz"
+      },
+      {
+        image: "https://m.media-amazon.com/images/I/71Nks0VIyFL._AC_SL1500_.jpg",
+        title: "4-in-1 Travel Dispenser Bottle TSA Approved",
+        tag: "Travel Gadget",
+        filters: ["Travel", "Home"],
+        desc: "A leak-proof refillable toiletry dispenser that replaces four separate travel bottles. Great for shampoo, conditioner, lotion, skincare, body wash, gym bags, business travel, and carry-ons.",
+        chips: ["4-in-1 Bottle", "TSA Approved", "Leak-Proof", "Easy Clean"],
+        details: [
+          "Each container holds 1.1oz or 33ml.",
+          "Replaces four travel bottles in one compact dispenser.",
+          "Removable pump and wide mouth make cleaning easier.",
+          "Works with shampoo, conditioner, lotion, body wash, creams, and serums.",
+          "Good for flights, gym, business trips, and everyday travel."
+        ],
+        link: "https://amzn.to/4v1lT3q"
+      },
+      {
+        image: "https://m.media-amazon.com/images/I/61JInT6cGJL._AC_SL1500_.jpg",
+        title: "POV Glasses 4K Baseball Sunglasses Camera",
+        tag: "Smart Glasses",
+        filters: ["Tech", "Outdoor", "Travel"],
+        desc: "Smart POV camera sunglasses made for first-person video recording during running, cycling, hiking, baseball, and outdoor action. This device records video only and does not record audio.",
+        chips: ["4K Video", "Anti-Glare Lens", "Lightweight", "Hands-Free"],
+        details: [
+          "Designed for first-person outdoor and sports video capture.",
+          "Anti-glare lens helps visibility under bright sunlight or stadium lights.",
+          "Lightweight design supports longer wear during activity.",
+          "Easy transfer options help move videos to other devices.",
+          "Battery life can support up to around two hours of use."
+        ],
+        link: "https://amzn.to/44AQfyS"
+      }
+    ];
+
+    const grid = document.getElementById("productsGrid");
+    const filterButtons = document.querySelectorAll(".filter-btn");
+
+    function renderProducts(filter = "all"){
+      grid.innerHTML = "";
+
+      const filteredProducts = filter === "all"
+        ? products
+        : products.filter(product => product.filters.includes(filter));
+
+      filteredProducts.forEach(product => {
+        const card = document.createElement("article");
+        card.className = "product-card";
+
+        card.innerHTML = `
+          <div class="product-img-box">
+            <span class="tag">${product.tag}</span>
+            <img src="${product.image}" alt="${product.title}">
+          </div>
+
+          <div class="product-content">
+            <h3>${product.title}</h3>
+            <p>${product.desc}</p>
+
+            <div class="chips">
+              ${product.chips.map(chip => `<span>${chip}</span>`).join("")}
+            </div>
+
+            <a class="shop-btn" href="${product.link}" target="_blank" rel="nofollow sponsored noopener">
+              Shop on Amazon
+            </a>
+
+            <details>
+              <summary>View quick details</summary>
+              <ul>
+                ${product.details.map(item => `<li>${item}</li>`).join("")}
+              </ul>
+            </details>
+          </div>
+        `;
+
+        grid.appendChild(card);
+      });
+    }
+
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+        renderProducts(button.dataset.filter);
+      });
+    });
+
+    renderProducts();
+  </script>
 
 </body>
 </html>
