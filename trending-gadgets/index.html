@@ -11,6 +11,7 @@
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
+
     body{
       font-family:'Poppins',sans-serif;
       color:#fff;
@@ -21,31 +22,45 @@
         radial-gradient(circle at 50% 100%,rgba(0,255,160,.16),transparent 38%),
         linear-gradient(135deg,#020711,#071525 48%,#03060d);
     }
+
     a{text-decoration:none;color:inherit}
     .container{width:92%;max-width:1240px;margin:auto}
 
     .bg-grid{
-      position:fixed;inset:0;z-index:-4;
+      position:fixed;
+      inset:0;
+      z-index:-4;
       background-image:
         linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
         linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
       background-size:48px 48px;
       mask-image:linear-gradient(to bottom,rgba(0,0,0,.9),rgba(0,0,0,.15));
     }
+
     .glow-one,.glow-two,.glow-three{
-      position:fixed;width:430px;height:430px;border-radius:50%;
-      filter:blur(125px);opacity:.25;z-index:-3;pointer-events:none;
+      position:fixed;
+      width:430px;
+      height:430px;
+      border-radius:50%;
+      filter:blur(125px);
+      opacity:.25;
+      z-index:-3;
+      pointer-events:none;
     }
+
     .glow-one{background:#00d9ff;top:80px;left:-120px}
     .glow-two{background:#ffc400;top:150px;right:-150px}
     .glow-three{background:#00ffa6;bottom:-150px;left:35%}
 
     header{
-      position:sticky;top:0;z-index:100;
+      position:sticky;
+      top:0;
+      z-index:100;
       background:rgba(3,8,18,.74);
       backdrop-filter:blur(18px);
       border-bottom:1px solid rgba(255,255,255,.10);
     }
+
     .nav{
       height:78px;
       display:flex;
@@ -53,6 +68,7 @@
       justify-content:space-between;
       gap:18px;
     }
+
     .logo{
       font-family:'Orbitron',sans-serif;
       font-size:1.45rem;
@@ -60,9 +76,23 @@
       letter-spacing:1px;
       text-transform:uppercase;
     }
-    .logo span{color:#00d9ff;text-shadow:0 0 25px rgba(0,217,255,.65)}
-    .nav-links{display:flex;gap:24px;color:#d9f5ff;font-size:.93rem;font-weight:600}
+
+    .logo span{
+      color:#00d9ff;
+      text-shadow:0 0 25px rgba(0,217,255,.65);
+    }
+
+    .nav-links{
+      display:flex;
+      gap:24px;
+      align-items:center;
+      color:#d9f5ff;
+      font-size:.93rem;
+      font-weight:600;
+    }
+
     .nav-links a:hover{color:#00d9ff}
+
     .nav-btn{
       background:linear-gradient(135deg,#00d9ff,#00ffa6);
       color:#03111d;
@@ -82,6 +112,7 @@
       align-items:center;
       padding:74px 0 65px;
     }
+
     .eyebrow{
       display:inline-flex;
       align-items:center;
@@ -93,18 +124,24 @@
       color:#aef5ff;
       font-weight:800;
       margin-bottom:22px;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.13);
     }
+
     .pulse{
-      width:10px;height:10px;border-radius:50%;
+      width:10px;
+      height:10px;
+      border-radius:50%;
       background:#00ffa6;
       box-shadow:0 0 0 0 rgba(0,255,166,.7);
       animation:pulse 1.8s infinite;
     }
+
     @keyframes pulse{
       0%{box-shadow:0 0 0 0 rgba(0,255,166,.7)}
       70%{box-shadow:0 0 0 13px rgba(0,255,166,0)}
       100%{box-shadow:0 0 0 0 rgba(0,255,166,0)}
     }
+
     h1{
       font-family:'Orbitron',sans-serif;
       font-size:clamp(2.65rem,6vw,6.1rem);
@@ -114,7 +151,12 @@
       margin-bottom:22px;
       text-shadow:0 18px 45px rgba(0,0,0,.6);
     }
-    h1 span{color:#00d9ff;text-shadow:0 0 35px rgba(0,217,255,.72)}
+
+    h1 span{
+      color:#00d9ff;
+      text-shadow:0 0 35px rgba(0,217,255,.72);
+    }
+
     .hero p{
       max-width:670px;
       color:#d9eaff;
@@ -122,7 +164,14 @@
       font-size:1.06rem;
       margin-bottom:30px;
     }
-    .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:30px}
+
+    .hero-actions{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-bottom:30px;
+    }
+
     .primary-btn,.secondary-btn{
       display:inline-flex;
       align-items:center;
@@ -135,17 +184,27 @@
       letter-spacing:.4px;
       transition:.3s ease;
     }
+
     .primary-btn{
       background:linear-gradient(135deg,#00d9ff,#00ffa6);
       color:#03111d;
       box-shadow:0 20px 45px rgba(0,217,255,.34);
     }
-    .primary-btn:hover{transform:translateY(-5px) scale(1.02)}
+
+    .primary-btn:hover{
+      transform:translateY(-5px) scale(1.02);
+      box-shadow:0 28px 65px rgba(0,217,255,.5);
+    }
+
     .secondary-btn{
       border:1px solid rgba(255,255,255,.18);
       background:rgba(255,255,255,.08);
     }
-    .secondary-btn:hover{background:rgba(255,255,255,.15);transform:translateY(-4px)}
+
+    .secondary-btn:hover{
+      background:rgba(255,255,255,.15);
+      transform:translateY(-4px);
+    }
 
     .mini-points{
       display:grid;
@@ -153,6 +212,7 @@
       gap:14px;
       max-width:690px;
     }
+
     .mini-points div{
       background:rgba(255,255,255,.08);
       border:1px solid rgba(255,255,255,.12);
@@ -160,6 +220,7 @@
       padding:13px 14px;
       font-weight:800;
       color:#eefaff;
+      backdrop-filter:blur(12px);
       text-align:center;
     }
 
@@ -168,6 +229,7 @@
       min-height:660px;
       perspective:1200px;
     }
+
     .hero-card{
       position:absolute;
       width:42%;
@@ -179,6 +241,7 @@
       box-shadow:0 40px 90px rgba(0,0,0,.62);
       transition:.4s;
     }
+
     .hero-card img{
       width:100%;
       aspect-ratio:1/1;
@@ -188,12 +251,17 @@
       background:#fff;
       padding:8px;
     }
-    .hero-card:nth-child(1){left:4%;top:4%;transform:rotateY(-12deg) rotateZ(-5deg);z-index:6}
-    .hero-card:nth-child(2){right:5%;top:8%;transform:rotateY(10deg) rotateZ(5deg);z-index:5}
+
+    .hero-card:nth-child(1){left:4%;top:3%;transform:rotateY(-12deg) rotateZ(-5deg);z-index:6}
+    .hero-card:nth-child(2){right:6%;top:8%;transform:rotateY(10deg) rotateZ(5deg);z-index:5}
     .hero-card:nth-child(3){left:2%;top:39%;transform:rotateY(-8deg) rotateZ(5deg);z-index:4}
-    .hero-card:nth-child(4){right:10%;top:45%;transform:rotateY(12deg) rotateZ(-5deg);z-index:3}
-    .hero-card:nth-child(5){left:30%;bottom:0;transform:rotateY(-5deg) rotateZ(2deg);z-index:2}
-    .hero-card:hover{transform:rotateY(0deg) rotateZ(0deg) translateY(-10px);z-index:10}
+    .hero-card:nth-child(4){right:11%;top:45%;transform:rotateY(12deg) rotateZ(-5deg);z-index:3}
+    .hero-card:nth-child(5){left:28%;bottom:0;transform:rotateY(-5deg) rotateZ(2deg);z-index:2}
+
+    .hero-card:hover{
+      transform:rotateY(0deg) rotateZ(0deg) translateY(-10px);
+      z-index:10;
+    }
 
     .floating-badge{
       position:absolute;
@@ -214,7 +282,12 @@
     }
 
     .section{padding:78px 0}
-    .section-title{text-align:center;margin-bottom:46px}
+
+    .section-title{
+      text-align:center;
+      margin-bottom:46px;
+    }
+
     .section-title h2{
       font-family:'Orbitron',sans-serif;
       font-size:clamp(2.1rem,5vw,4.1rem);
@@ -222,7 +295,9 @@
       letter-spacing:1px;
       margin-bottom:14px;
     }
+
     .section-title h2 span{color:#00d9ff}
+
     .section-title p{
       color:#cfe7ff;
       max-width:850px;
@@ -235,6 +310,7 @@
       grid-template-columns:repeat(4,1fr);
       gap:22px;
     }
+
     .feature{
       position:relative;
       overflow:hidden;
@@ -246,18 +322,46 @@
       box-shadow:0 30px 70px rgba(0,0,0,.32);
       transition:.35s ease;
     }
-    .feature:hover{transform:translateY(-10px);border-color:rgba(0,217,255,.52)}
+
+    .feature:hover{
+      transform:translateY(-10px);
+      border-color:rgba(0,217,255,.52);
+    }
+
+    .feature::after{
+      content:"";
+      position:absolute;
+      width:120px;
+      height:120px;
+      background:#00d9ff;
+      filter:blur(60px);
+      opacity:.16;
+      right:-30px;
+      bottom:-30px;
+    }
+
     .feature-icon{
-      width:54px;height:54px;
-      display:grid;place-items:center;
+      width:54px;
+      height:54px;
+      display:grid;
+      place-items:center;
       border-radius:16px;
       background:rgba(0,217,255,.16);
       border:1px solid rgba(0,217,255,.35);
       font-size:1.8rem;
       margin-bottom:20px;
     }
-    .feature h3{font-size:1.12rem;margin-bottom:12px}
-    .feature p{color:#d4e8f8;line-height:1.7;font-size:.94rem}
+
+    .feature h3{
+      font-size:1.12rem;
+      margin-bottom:12px;
+    }
+
+    .feature p{
+      color:#d4e8f8;
+      line-height:1.7;
+      font-size:.94rem;
+    }
 
     .filter-bar{
       display:flex;
@@ -266,6 +370,7 @@
       flex-wrap:wrap;
       margin-bottom:36px;
     }
+
     .filter-btn{
       border:1px solid rgba(255,255,255,.16);
       background:rgba(255,255,255,.08);
@@ -276,6 +381,7 @@
       cursor:pointer;
       transition:.25s ease;
     }
+
     .filter-btn:hover,.filter-btn.active{
       background:linear-gradient(135deg,#00d9ff,#00ffa6);
       color:#03111d;
@@ -288,6 +394,7 @@
       grid-template-columns:repeat(2,1fr);
       gap:30px;
     }
+
     .product-card{
       position:relative;
       overflow:hidden;
@@ -305,11 +412,25 @@
       padding:22px;
       transition:.35s ease;
     }
+
     .product-card:hover{
       transform:translateY(-10px);
       border-color:rgba(0,217,255,.52);
       box-shadow:0 45px 95px rgba(0,0,0,.58);
     }
+
+    .product-card::before{
+      content:"";
+      position:absolute;
+      width:180px;
+      height:180px;
+      background:#00ffa6;
+      filter:blur(90px);
+      opacity:.13;
+      right:-40px;
+      bottom:-40px;
+    }
+
     .product-img-box{
       position:relative;
       z-index:2;
@@ -320,7 +441,11 @@
       transform:rotate(-2deg);
       transition:.35s ease;
     }
-    .product-card:hover .product-img-box{transform:rotate(0deg) scale(1.03)}
+
+    .product-card:hover .product-img-box{
+      transform:rotate(0deg) scale(1.03);
+    }
+
     .product-img-box img{
       width:100%;
       aspect-ratio:1/1;
@@ -328,6 +453,7 @@
       display:block;
       border-radius:18px;
     }
+
     .tag{
       position:absolute;
       left:12px;
@@ -340,11 +466,31 @@
       font-size:.75rem;
       font-weight:900;
       text-transform:uppercase;
+      backdrop-filter:blur(12px);
     }
+
     .product-content{position:relative;z-index:2}
-    .product-content h3{font-size:1.2rem;line-height:1.35;margin-bottom:12px}
-    .product-content p{color:#d7e9f5;line-height:1.65;font-size:.94rem;margin-bottom:16px}
-    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+
+    .product-content h3{
+      font-size:1.2rem;
+      line-height:1.35;
+      margin-bottom:12px;
+    }
+
+    .product-content p{
+      color:#d7e9f5;
+      line-height:1.65;
+      font-size:.94rem;
+      margin-bottom:16px;
+    }
+
+    .chips{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+
     .chips span{
       padding:7px 10px;
       border-radius:50px;
@@ -354,11 +500,13 @@
       font-size:.78rem;
       font-weight:800;
     }
+
     .shop-btn{
       display:inline-flex;
       justify-content:center;
       align-items:center;
       width:100%;
+      text-align:center;
       background:linear-gradient(135deg,#00d9ff,#00ffa6);
       color:#03111d;
       padding:14px 16px;
@@ -368,7 +516,12 @@
       box-shadow:0 15px 34px rgba(0,217,255,.28);
       transition:.25s ease;
     }
-    .shop-btn:hover{transform:translateY(-3px)}
+
+    .shop-btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 20px 45px rgba(0,217,255,.44);
+    }
+
     details{
       border-top:1px solid rgba(255,255,255,.10);
       padding-top:12px;
@@ -376,8 +529,18 @@
       color:#d7e9f5;
       font-size:.9rem;
     }
-    summary{cursor:pointer;color:#b8f7ff;font-weight:900}
-    details ul{padding-left:18px;margin-top:10px;line-height:1.75}
+
+    summary{
+      cursor:pointer;
+      color:#b8f7ff;
+      font-weight:900;
+    }
+
+    details ul{
+      padding-left:18px;
+      margin-top:10px;
+      line-height:1.75;
+    }
 
     .style-section{
       display:grid;
@@ -392,6 +555,7 @@
       padding:38px;
       box-shadow:0 40px 85px rgba(0,0,0,.42);
     }
+
     .style-section h2{
       font-family:'Orbitron',sans-serif;
       font-size:clamp(2rem,4.3vw,3.8rem);
@@ -399,17 +563,40 @@
       text-transform:uppercase;
       margin-bottom:18px;
     }
+
     .style-section h2 span{color:#00d9ff}
-    .style-section p{color:#d8e9f5;line-height:1.85;margin-bottom:18px}
-    .style-list{list-style:none;margin-top:22px}
-    .style-list li{margin-bottom:13px;color:#eefcff;font-weight:700}
-    .style-list li::before{content:"✔";color:#00ffa6;margin-right:11px;font-weight:900}
+
+    .style-section p{
+      color:#d8e9f5;
+      line-height:1.85;
+      margin-bottom:18px;
+    }
+
+    .style-list{
+      list-style:none;
+      margin-top:22px;
+    }
+
+    .style-list li{
+      margin-bottom:13px;
+      color:#eefcff;
+      font-weight:700;
+    }
+
+    .style-list li::before{
+      content:"✔";
+      color:#00ffa6;
+      margin-right:11px;
+      font-weight:900;
+    }
+
     .style-visual{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:15px;
       transform:rotate(2deg);
     }
+
     .style-visual img{
       width:100%;
       aspect-ratio:1/1;
@@ -432,6 +619,7 @@
       border:1px solid rgba(255,255,255,.14);
       box-shadow:0 45px 95px rgba(0,0,0,.46);
     }
+
     .cta::before{
       content:"TRENDING GADGETS";
       position:absolute;
@@ -444,6 +632,7 @@
       opacity:.045;
       pointer-events:none;
     }
+
     .cta h2{
       position:relative;
       font-family:'Orbitron',sans-serif;
@@ -451,6 +640,7 @@
       text-transform:uppercase;
       margin-bottom:16px;
     }
+
     .cta p{
       position:relative;
       color:#d8e9f5;
@@ -458,7 +648,14 @@
       margin:0 auto 30px;
       line-height:1.8;
     }
-    .amazon-note{margin-top:18px;color:#b8cadc;font-size:.86rem;position:relative}
+
+    .amazon-note{
+      margin-top:18px;
+      color:#b8cadc;
+      font-size:.86rem;
+      position:relative;
+    }
+
     footer{
       padding:35px 0;
       text-align:center;
@@ -468,6 +665,7 @@
       margin-top:70px;
       line-height:1.7;
     }
+
     .sticky-mobile{
       display:none;
       position:fixed;
@@ -491,6 +689,7 @@
       .products-grid{grid-template-columns:1fr}
       .feature-grid{grid-template-columns:repeat(2,1fr)}
     }
+
     @media(max-width:760px){
       .nav-links{display:none}
       .hero{padding-top:48px}
@@ -501,6 +700,7 @@
       .sticky-mobile{display:block}
       body{padding-bottom:78px}
     }
+
     @media(max-width:560px){
       .nav{height:70px}
       .logo{font-size:1.05rem}
@@ -552,8 +752,8 @@
 
         <p>
           Discover practical Amazon finds that make daily life easier, cleaner, cooler, and more convenient.
-          From cleaning tools and kitchen gadgets to travel bottles, smart glasses, hydration gear, and charging accessories,
-          this collection is made for smart everyday use.
+          From cleaning tools and kitchen gadgets to travel bottles, smart glasses, hydration gear,
+          kids safety inserts, and charging accessories — this collection is made for smart everyday use.
         </p>
 
         <div class="hero-actions">
@@ -563,8 +763,8 @@
 
         <div class="mini-points">
           <div>Home Essentials</div>
-          <div>Kitchen Helpers</div>
-          <div>Travel Friendly</div>
+          <div>Kids & Travel</div>
+          <div>Smart Gadgets</div>
         </div>
       </div>
 
@@ -588,7 +788,7 @@
         </div>
 
         <div class="hero-card">
-          <img src="https://m.media-amazon.com/images/I/61JInT6cGJL._AC_SL1500_.jpg" alt="POV camera glasses">
+          <img src="https://m.media-amazon.com/images/I/81FQTTAnEAL._AC_SL1500_.jpg" alt="AirTag insoles for kids">
         </div>
       </div>
     </section>
@@ -597,9 +797,9 @@
       <div class="section-title">
         <h2>Why These <span>Gadgets Stand Out</span></h2>
         <p>
-          This collection focuses on products that solve real daily problems: cleaning shoes,
-          making drinks better, staying hydrated outdoors, charging devices faster,
-          cleaning grills, prepping food, removing grime, and traveling lighter.
+          This collection focuses on products that solve real daily problems:
+          cleaning shoes, making drinks better, staying hydrated outdoors, charging devices,
+          cleaning grills, prepping food, removing grime, organizing travel items, and keeping kids’ shoes tracker-ready.
         </p>
       </div>
 
@@ -607,7 +807,7 @@
         <div class="feature">
           <div class="feature-icon">🧼</div>
           <h3>Cleaner Daily Life</h3>
-          <p>Useful cleaning tools for shoes, cars, kitchens, bathrooms, sofas, and home routines.</p>
+          <p>Useful cleaning tools for shoes, cars, kitchens, bathrooms, sofas, grills, and home routines.</p>
         </div>
 
         <div class="feature">
@@ -623,9 +823,9 @@
         </div>
 
         <div class="feature">
-          <div class="feature-icon">⚡</div>
-          <h3>Smart Convenience</h3>
-          <p>Fast charging, hands-free recording, portable design, and time-saving everyday solutions.</p>
+          <div class="feature-icon">🧒</div>
+          <h3>Kids Smart Use</h3>
+          <p>Helpful kids products like comfortable shoe inserts with hidden tracker holder designs.</p>
         </div>
       </div>
     </section>
@@ -646,6 +846,7 @@
         <button class="filter-btn" data-filter="Outdoor">Outdoor</button>
         <button class="filter-btn" data-filter="Tech">Tech</button>
         <button class="filter-btn" data-filter="Travel">Travel</button>
+        <button class="filter-btn" data-filter="Kids">Kids</button>
       </div>
 
       <div class="products-grid" id="productsGrid"></div>
@@ -666,7 +867,7 @@
 
           <p>
             These items are great for people who love useful Amazon finds, home hacks,
-            kitchen gadgets, cleaning tools, travel accessories, outdoor gear, and practical tech products.
+            kitchen gadgets, cleaning tools, travel accessories, outdoor gear, kids essentials, and practical tech products.
           </p>
 
           <ul class="style-list">
@@ -676,13 +877,14 @@
             <li>Use the kitchen shears to prep vegetables, meat, and ingredients quickly.</li>
             <li>Use the foam cleaner for car interiors, kitchens, bathrooms, and upholstery.</li>
             <li>Use the travel dispenser to carry shampoo, lotion, skincare, and body wash in one bottle.</li>
+            <li>Use the AirTag insoles for kids’ shoes when you need a comfortable tracker-holder option.</li>
           </ul>
         </div>
 
         <div class="style-visual">
           <img src="https://m.media-amazon.com/images/I/61-FcyGCyNL._AC_SL1000_.jpg" alt="Foam cleaner">
           <img src="https://m.media-amazon.com/images/I/61GM0mz0-BL._AC_SL1500_.jpg" alt="Kitchen shears">
-          <img src="https://m.media-amazon.com/images/I/81cG9Z41ptL._AC_SL1500_.jpg" alt="Hydration backpack">
+          <img src="https://m.media-amazon.com/images/I/81FQTTAnEAL._AC_SL1500_.jpg" alt="AirTag insoles for kids">
           <img src="https://m.media-amazon.com/images/I/71HXP2i7s0L._SL1500_.jpg" alt="Fast charging cable">
         </div>
       </div>
@@ -864,6 +1066,23 @@
           "Battery life can support up to around two hours of use."
         ],
         link: "https://amzn.to/44AQfyS"
+      },
+      {
+        image: "https://m.media-amazon.com/images/I/81FQTTAnEAL._AC_SL1500_.jpg",
+        title: "Insoles for AirTag Hidden Holder for Kids Shoes",
+        tag: "Kids Safety Gadget",
+        filters: ["Kids", "Travel", "Home"],
+        desc: "Comfortable pink kids shoe insoles designed with a hidden tracker holder pocket. A smart insert for kids’ shoes that keeps the tracker device secure while still feeling soft and comfortable for daily wear.",
+        chips: ["Hidden Holder", "Kids Shoes", "Trim to Fit", "Soft Comfort"],
+        details: [
+          "Designed with a hidden holder pocket for AirTag-style tracker devices.",
+          "Comfortable shoe insert made for kids’ daily shoes.",
+          "Pink design with cute rainbow, flower, crown, heart, and cherry graphics.",
+          "Trim-to-fit style helps adjust the insole for different small shoe sizes.",
+          "Useful for school shoes, casual shoes, travel, parks, and busy outdoor places.",
+          "Tracker device is not included. Use responsibly and only for your own child or with proper permission."
+        ],
+        link: "https://amzn.to/4yeC00o"
       }
     ];
 
